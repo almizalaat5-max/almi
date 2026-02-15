@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>خيام ملكية وبيوت شعر - رواد المظلات الأحساء</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="أفخم الخيام الملكية وبيوت الشعر في الأحساء. تصميم وتنفيذ مجالس خارجية تراثية وعصرية بأعلى جودة.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- خط أميري -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #fcf8f0;
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+        :root {
+            --primary-beige: #d9c5b3;
+            --light-beige: #f5efe7;
+            --dark-beige: #b2967d;
+            --accent-brown: #8b6f4c;
+            --saudi-green: #006C35;
+            --shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* الرأس مع تأثير حركي */
+        .site-header {
+            background-color: var(--saudi-green);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .site-header.scrolled {
+            background-color: #004d28;
+            padding: 8px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .site-header.scrolled .logo img {
+            height: 40px;
+        }
+        .site-header.scrolled .logo-text h1 {
+            font-size: 1.1rem;
+        }
+        .site-header.scrolled .logo-text span {
+            font-size: 0.7rem;
+        }
+        .site-header.scrolled .social-header a {
+            font-size: 1.1rem;
+        }
+        .site-header.scrolled .phone-number {
+            padding: 3px 8px;
+            font-size: 0.8rem;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            transition: 0.3s;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            transition: 0.3s;
+        }
+        .logo-text h1 {
+            font-size: 1.3rem;
+            color: white;
+            font-weight: 600;
+            line-height: 1.2;
+            transition: 0.3s;
+        }
+        .logo-text span {
+            font-size: 0.8rem;
+            color: white;
+            opacity: 0.9;
+            display: block;
+            transition: 0.3s;
+        }
+        .social-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            flex-wrap: wrap;
+        }
+        .social-header a {
+            color: white;
+            font-size: 1.3rem;
+            transition: 0.3s;
+        }
+        .social-header a:hover {
+            color: var(--primary-beige);
+            transform: scale(1.1);
+        }
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .phone-number i {
+            font-size: 1rem;
+        }
+        /* عنوان الصفحة */
+        .page-title {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        .page-title h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            color: var(--accent-brown);
+            margin-bottom: 10px;
+        }
+        .page-title p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /* معرض الصور الكامل */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 12px 15px;
+            background: var(--light-beige);
+            border-top: 2px solid var(--primary-beige);
+            font-size: 0.9rem;
+            color: var(--accent-brown);
+            font-weight: 500;
+            text-align: center;
+        }
+        /* باقي الأقسام */
+        .details {
+            background: var(--light-beige);
+            padding: 40px;
+            border-radius: 30px;
+            margin: 40px 0;
+            border: 1px solid var(--primary-beige);
+        }
+        .details h2 {
+            font-size: 2rem;
+            color: var(--accent-brown);
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+        }
+        .details p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .features li {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 500;
+            border-right: 4px solid var(--primary-beige);
+            box-shadow: var(--shadow);
+        }
+        .contact-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--saudi-green);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .contact-btn:hover {
+            background: var(--accent-brown);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .contact-btn i {
+            margin-left: 10px;
+        }
+        footer {
+            background: var(--dark-beige);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                flex-direction: column;
+            }
+            .page-title h1 { font-size: 2rem; }
+            .details { padding: 20px; }
+            .details h2 { font-size: 1.6rem; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- الرأس المتحرك -->
+    <header class="site-header" id="mainHeader">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png" alt="رواد المظلات في الأحساء">
+                </a>
+                <div class="logo-text">
+                    <h1>رواد المظلات</h1>
+                    <span>في الأحساء 2026</span>
+                </div>
+            </div>
+            <div class="social-header">
+                <a href="https://www.facebook.com/share/1BSmknBBBo/" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@almizalaat.alahsa?_r=1&_t=ZS-93wBgxolcLV" target="_blank" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/ALMIZ_ALAAT" target="_blank" aria-label="تويتر"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://wa.me/966567045945" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:0567045945">0567045945</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- عنوان الصفحة -->
+        <div class="page-title">
+            <h1>خيام ملكية وبيوت شعر</h1>
+            <p>أفخم المجالس الخارجية بتصاميم تراثية وعصرية تناسب كرم الضيافة في الأحساء</p>
+        </div>
+
+        <!-- معرض الصور الكامل (53 صورة) -->
+        <div class="gallery">
+            <!-- 1 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/VNQm3Gxh/5285107341525191507-120.jpg" alt="خيمة ملكية فاخرة مع إضاءة داخلية">
+                <figcaption class="gallery-caption">خيمة ملكية فاخرة مع إضاءة داخلية</figcaption>
+            </figure>
+            <!-- 2 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/MG2qhPCr/5285107341525191508-120.jpg" alt="بيت شعر تقليدي بمساحة واسعة">
+                <figcaption class="gallery-caption">بيت شعر تقليدي بمساحة واسعة</figcaption>
+            </figure>
+            <!-- 3 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/bvcpKC7W/5285107341525191510-120.jpg" alt="مجلس خارجي مع نجف فاخر">
+                <figcaption class="gallery-caption">مجلس خارجي مع نجف فاخر</figcaption>
+            </figure>
+            <!-- 4 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/tgQpLSKK/5285107341525191511-120.jpg" alt="خيمة عصرية بتصاميم هندسية">
+                <figcaption class="gallery-caption">خيمة عصرية بتصاميم هندسية</figcaption>
+            </figure>
+            <!-- 5 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/T3WTNM49/5289875884800150813-120.jpg" alt="بيت شعر مع سدو تراثي">
+                <figcaption class="gallery-caption">بيت شعر مع سدو تراثي</figcaption>
+            </figure>
+            <!-- 6 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/K8gmpSHd/5289875884800150814-121.jpg" alt="خيمة ملكية مع مدخل مضيء">
+                <figcaption class="gallery-caption">خيمة ملكية مع مدخل مضيء</figcaption>
+            </figure>
+            <!-- 7 (تم تخطي الرابط التالف) -->
+            <!-- 8 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/zfZ89tst/5289875884800150816-121.jpg" alt="مجلس خارجي مع أرضيات خشبية">
+                <figcaption class="gallery-caption">مجلس خارجي مع أرضيات خشبية</figcaption>
+            </figure>
+            <!-- 9 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/52FfKdRG/5289875884800150817-121.jpg" alt="بيت شعر مع تكييف مركزي">
+                <figcaption class="gallery-caption">بيت شعر مع تكييف مركزي</figcaption>
+            </figure>
+            <!-- 10 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/g26GtFTC/5289875884800150818-121.jpg" alt="خيمة ملكية مع ديكورات داخلية">
+                <figcaption class="gallery-caption">خيمة ملكية مع ديكورات داخلية</figcaption>
+            </figure>
+            <!-- 11 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/zGRq2Zcd/5289875884800150820-121.jpg" alt="مجلس تراثي مع إنارة تقليدية">
+                <figcaption class="gallery-caption">مجلس تراثي مع إنارة تقليدية</figcaption>
+            </figure>
+            <!-- 12 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/QdWjYGy4/5289875884800150821-121.jpg" alt="بيت شعر صيفي مع تهوية">
+                <figcaption class="gallery-caption">بيت شعر صيفي مع تهوية</figcaption>
+            </figure>
+            <!-- 13 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/nhQnSbW8/5289875884800150822-121.jpg" alt="خيمة ملكية مع ستائر فاخرة">
+                <figcaption class="gallery-caption">خيمة ملكية مع ستائر فاخرة</figcaption>
+            </figure>
+            <!-- 14 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/NjrQCqz2/5289875884800150824-121.jpg" alt="مجلس خارجي مع موقد نار">
+                <figcaption class="gallery-caption">مجلس خارجي مع موقد نار</figcaption>
+            </figure>
+            <!-- 15 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/YCmtDKsm/5289875884800150825-121.jpg" alt="بيت شعر مع مدخل مقوس">
+                <figcaption class="gallery-caption">بيت شعر مع مدخل مقوس</figcaption>
+            </figure>
+            <!-- 16 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Dwb7pkMQ/5289875884800150828-121.jpg" alt="خيمة عصرية مع إضاءة ليد">
+                <figcaption class="gallery-caption">خيمة عصرية مع إضاءة ليد</figcaption>
+            </figure>
+            <!-- 17 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Dwb7pkMG/5289875884800150830-119.jpg" alt="مجلس خارجي مع أثاث مريح">
+                <figcaption class="gallery-caption">مجلس خارجي مع أثاث مريح</figcaption>
+            </figure>
+            <!-- 18 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Gmsbgw5x/5289875884800150832-121.jpg" alt="بيت شعر مع نوافذ خشبية">
+                <figcaption class="gallery-caption">بيت شعر مع نوافذ خشبية</figcaption>
+            </figure>
+            <!-- 19 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/pXS2BXqY/5289875884800150833-120.jpg" alt="خيمة ملكية مع ثريات كريستال">
+                <figcaption class="gallery-caption">خيمة ملكية مع ثريات كريستال</figcaption>
+            </figure>
+            <!-- 20 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/2SBC9RK4/5289875884800150835-119.jpg" alt="مجلس تراثي مع سجاد فاخر">
+                <figcaption class="gallery-caption">مجلس تراثي مع سجاد فاخر</figcaption>
+            </figure>
+            <!-- 21 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/8zrTXQ0M/5289875884800150836-121.jpg" alt="بيت شعر مع مدخل واسع">
+                <figcaption class="gallery-caption">بيت شعر مع مدخل واسع</figcaption>
+            </figure>
+            <!-- 22 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/nLbp6Ry3/5289875884800150842-121.jpg" alt="خيمة ملكية مع زخارف عربية">
+                <figcaption class="gallery-caption">خيمة ملكية مع زخارف عربية</figcaption>
+            </figure>
+            <!-- 23 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/JhVM96fY/5289875884800150854-121.jpg" alt="مجلس خارجي مع إضاءة ناعمة">
+                <figcaption class="gallery-caption">مجلس خارجي مع إضاءة ناعمة</figcaption>
+            </figure>
+            <!-- 24 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/N0qBWJ3z/5289875884800150857-121.jpg" alt="بيت شعر مع أرضيات مفروشة">
+                <figcaption class="gallery-caption">بيت شعر مع أرضيات مفروشة</figcaption>
+            </figure>
+            <!-- 25 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/0NRPLWTt/5289875884800150864-121.jpg" alt="خيمة عصرية مع تكييف">
+                <figcaption class="gallery-caption">خيمة عصرية مع تكييف</figcaption>
+            </figure>
+            <!-- 26 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/c4zsc4XB/5348356309826342778-121.jpg" alt="مجلس خارجي مع شلال صغير">
+                <figcaption class="gallery-caption">مجلس خارجي مع شلال صغير</figcaption>
+            </figure>
+            <!-- 27 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/gk7YKkNw/5348356309826342780-121.jpg" alt="بيت شعر مع إضاءة مخفية">
+                <figcaption class="gallery-caption">بيت شعر مع إضاءة مخفية</figcaption>
+            </figure>
+            <!-- 28 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/yYGVTYv0/5348356309826342782-121.jpg" alt="خيمة ملكية مع مدخل ملكي">
+                <figcaption class="gallery-caption">خيمة ملكية مع مدخل ملكي</figcaption>
+            </figure>
+            <!-- 29 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/dtfq9t4R/5348356309826342783-121.jpg" alt="مجلس تراثي مع ديكورات خشبية">
+                <figcaption class="gallery-caption">مجلس تراثي مع ديكورات خشبية</figcaption>
+            </figure>
+            <!-- 30 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/yYx19SXN/5377619498266989145-121-edit-952924069543934.jpg" alt="بيت شعر مع أعمدة خشبية">
+                <figcaption class="gallery-caption">بيت شعر مع أعمدة خشبية</figcaption>
+            </figure>
+            <!-- 31 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/c4CxY8Ms/5377619498266989146-119-edit-952903789381129.jpg" alt="خيمة ملكية مع إضاءة خارجية">
+                <figcaption class="gallery-caption">خيمة ملكية مع إضاءة خارجية</figcaption>
+            </figure>
+            <!-- 32 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/dtfq9t4D/5426978061296538685-120.jpg" alt="مجلس خارجي مع مظلة جانبية">
+                <figcaption class="gallery-caption">مجلس خارجي مع مظلة جانبية</figcaption>
+            </figure>
+            <!-- 33 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/X7PVg7QY/5426978061296538748-120.jpg" alt="بيت شعر مع نوافذ كبيرة">
+                <figcaption class="gallery-caption">بيت شعر مع نوافذ كبيرة</figcaption>
+            </figure>
+            <!-- 34 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/4N0J1NB4/5426978061296538750-120.jpg" alt="خيمة عصرية مع مقاعد مريحة">
+                <figcaption class="gallery-caption">خيمة عصرية مع مقاعد مريحة</figcaption>
+            </figure>
+            <!-- 35 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Ghfcjhqr/5426978061296538752-121.jpg" alt="مجلس تراثي مع إنارة تراثية">
+                <figcaption class="gallery-caption">مجلس تراثي مع إنارة تراثية</figcaption>
+            </figure>
+            <!-- 36 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/YqPpxqbM/5426978061296538753-120.jpg" alt="بيت شعر مع أرضيات رخامية">
+                <figcaption class="gallery-caption">بيت شعر مع أرضيات رخامية</figcaption>
+            </figure>
+            <!-- 37 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/qMFkGMjk/5426978061296538754-121.jpg" alt="خيمة ملكية مع ستائر شفافة">
+                <figcaption class="gallery-caption">خيمة ملكية مع ستائر شفافة</figcaption>
+            </figure>
+            <!-- 38 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/VLvfMbBw/5426978061296538755-121.jpg" alt="مجلس خارجي مع إضاءة ملونة">
+                <figcaption class="gallery-caption">مجلس خارجي مع إضاءة ملونة</figcaption>
+            </figure>
+            <!-- 39 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/7YhH7TMY/5426978061296538756-121.jpg" alt="بيت شعر مع سقف مرتفع">
+                <figcaption class="gallery-caption">بيت شعر مع سقف مرتفع</figcaption>
+            </figure>
+            <!-- 40 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/J4F1Q4PV/5426978061296538757-120.jpg" alt="خيمة ملكية مع ديكورات ذهبية">
+                <figcaption class="gallery-caption">خيمة ملكية مع ديكورات ذهبية</figcaption>
+            </figure>
+            <!-- 41 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/yYx19SX8/IMG-20260118-WA0000.jpg" alt="مجلس خارجي مع نافورة صغيرة">
+                <figcaption class="gallery-caption">مجلس خارجي مع نافورة صغيرة</figcaption>
+            </figure>
+            <!-- 42 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/m2kLMF36/IMG-20260118-WA0017.jpg" alt="بيت شعر مع إضاءة ليلية">
+                <figcaption class="gallery-caption">بيت شعر مع إضاءة ليلية</figcaption>
+            </figure>
+            <!-- 43 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/yYx19Sh2/IMG-20260118-WA0018.jpg" alt="خيمة عصرية مع تكييف مركزي">
+                <figcaption class="gallery-caption">خيمة عصرية مع تكييف مركزي</figcaption>
+            </figure>
+            <!-- 44 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/4Nyfthvq/IMG-20260118-WA0019.jpg" alt="مجلس تراثي مع سدو ملون">
+                <figcaption class="gallery-caption">مجلس تراثي مع سدو ملون</figcaption>
+            </figure>
+            <!-- 45 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/9F0mTqtc/IMG-20260118-WA0020.jpg" alt="بيت شعر مع أرضيات خشبية">
+                <figcaption class="gallery-caption">بيت شعر مع أرضيات خشبية</figcaption>
+            </figure>
+            <!-- 46 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/7YhH7T1R/IMG-20260118-WA0021.jpg" alt="خيمة ملكية مع ثريا كبيرة">
+                <figcaption class="gallery-caption">خيمة ملكية مع ثريا كبيرة</figcaption>
+            </figure>
+            <!-- 47 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/J40rJB3K/IMG-20260118-WA0022.jpg" alt="مجلس خارجي مع مدخل عربي">
+                <figcaption class="gallery-caption">مجلس خارجي مع مدخل عربي</figcaption>
+            </figure>
+            <!-- 48 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/qMqJnCcj/IMG-20260118-WA0024.jpg" alt="بيت شعر مع إنارة حديثة">
+                <figcaption class="gallery-caption">بيت شعر مع إنارة حديثة</figcaption>
+            </figure>
+            <!-- 49 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Yq0rgmNX/IMG-20260118-WA0025.jpg" alt="خيمة عصرية مع مقاعد ملكية">
+                <figcaption class="gallery-caption">خيمة عصرية مع مقاعد ملكية</figcaption>
+            </figure>
+            <!-- 50 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/FszrcJbT/IMG-20260118-WA0026.jpg" alt="مجلس تراثي مع إضاءة دافئة">
+                <figcaption class="gallery-caption">مجلس تراثي مع إضاءة دافئة</figcaption>
+            </figure>
+            <!-- 51 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/zXQJkX0q/IMG-20260118-111742.jpg" alt="بيت شعر مع زخارف تقليدية">
+                <figcaption class="gallery-caption">بيت شعر مع زخارف تقليدية</figcaption>
+            </figure>
+            <!-- 52 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/yYGVTYvC/slider2.jpg" alt="خيمة ملكية مع إضاءة مخفية">
+                <figcaption class="gallery-caption">خيمة ملكية مع إضاءة مخفية</figcaption>
+            </figure>
+            <!-- 53 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/FK5cPLpS/mqawl-bywt-shʿr-fy-alahsaʾ-21.webp" alt="مجلس خارجي مع أعمدة رخامية">
+                <figcaption class="gallery-caption">مجلس خارجي مع أعمدة رخامية</figcaption>
+            </figure>
+        </div>
+
+        <!-- وصف الخدمة -->
+        <div class="details">
+            <h2>خيام ملكية وبيوت شعر فاخرة</h2>
+            <p>في <strong>رواد المظلات بالأحساء</strong>، نقدم أفخم وأجود أنواع الخيام الملكية وبيوت الشعر المصممة خصيصاً لتلبي ذوقك الرفيع وتتناسب مع كرم الضيافة في المنطقة. نصمم وننفذ المجالس الخارجية بأحدث التصاميم التي تمزج بين الأصالة التراثية والعصرية.</p>
+            <p>نستخدم أجود أنواع الأقمشة والخامات المقاومة للعوامل الجوية، مع توفير جميع الأحجام والتشكيلات التي تناسب مختلف الأذواق والمساحات. سواء كنت تبحث عن مجلس شتوي دافئ أو مكان للاحتفالات والمناسبات، لدينا الحل المثالي.</p>
+            
+            <ul class="features">
+                <li>خيام ملكية فاخرة</li>
+                <li>بيوت شعر تراثية</li>
+                <li>مجالس خارجية عصرية</li>
+                <li>أقمشة مقاومة للعوامل الجوية</li>
+                <li>تصاميم حسب الطلب</li>
+                <li>تنفيذ سريع ودقيق</li>
+                <li>أسعار تنافسية</li>
+                <li>ضمان على الخامات</li>
+            </ul>
+        </div>
+
+        <!-- زر الاتصال -->
+        <div class="contact-section">
+            <a href="https://wa.me/966567045945" class="contact-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل معنا للاستفسار
+            </a>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <p>© 2026 رواد المظلات في الأحساء - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- كود JavaScript للتحكم في الترويسة -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+  </html>
