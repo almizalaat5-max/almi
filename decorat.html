@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>ديكورات داخلية وخارجية - رواد المظلات الأحساء</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="أفخم الديكورات الداخلية والخارجية في الأحساء. تصاميم عصرية تجمع بين الجمال والوظيفة للمنازل والمجالس والحدائق.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- خط أميري -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #fcf8f0;
+            color: #3a3a3a;
+            line-height: 1.5;
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        :root {
+            --primary-beige: #d9c5b3;
+            --light-beige: #f5efe7;
+            --dark-beige: #b2967d;
+            --accent-brown: #8b6f4c;
+            --saudi-green: #006C35;
+            --shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            width: 100%;
+            padding: 0 12px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1300px;
+                padding: 0 20px;
+            }
+        }
+        /* الرأس المتحرك */
+        .site-header {
+            background-color: var(--saudi-green);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .site-header.scrolled {
+            background-color: #004d28;
+            padding: 5px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .site-header.scrolled .logo img {
+            height: 35px;
+        }
+        .site-header.scrolled .logo-text h1 {
+            font-size: 1rem;
+        }
+        .site-header.scrolled .logo-text span {
+            font-size: 0.65rem;
+        }
+        .site-header.scrolled .social-header a {
+            font-size: 1rem;
+        }
+        .site-header.scrolled .phone-number {
+            padding: 3px 8px;
+            font-size: 0.75rem;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        @media (min-width: 600px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo img {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            transition: 0.3s;
+        }
+        .logo-text h1 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+            line-height: 1.2;
+            transition: 0.3s;
+        }
+        .logo-text span {
+            font-size: 0.75rem;
+            color: white;
+            opacity: 0.9;
+            display: block;
+            transition: 0.3s;
+        }
+        .social-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .social-header a {
+            color: white;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            padding: 5px;
+        }
+        .social-header a:hover {
+            color: var(--primary-beige);
+            transform: scale(1.1);
+        }
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        .phone-number i {
+            font-size: 0.9rem;
+        }
+        /* عنوان الصفحة */
+        .page-title {
+            text-align: center;
+            margin: 25px 0 15px;
+        }
+        .page-title h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            color: var(--accent-brown);
+            margin-bottom: 8px;
+        }
+        .page-title p {
+            font-size: 1rem;
+            color: #555;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .page-title h1 { font-size: 2.5rem; }
+            .page-title p { font-size: 1.2rem; }
+        }
+        /* معرض الصور */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        @media (min-width: 500px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        @media (min-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 10px;
+            background: var(--light-beige);
+            border-top: 2px solid var(--primary-beige);
+            font-size: 0.85rem;
+            color: var(--accent-brown);
+            font-weight: 500;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .gallery-caption {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+        /* قسم التفاصيل */
+        .details {
+            background: var(--light-beige);
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 1px solid var(--primary-beige);
+        }
+        .details h2 {
+            font-size: 1.6rem;
+            color: var(--accent-brown);
+            margin-bottom: 15px;
+            font-family: 'Amiri', serif;
+        }
+        .details p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        @media (min-width: 768px) {
+            .details {
+                padding: 40px;
+            }
+            .details h2 { font-size: 2rem; }
+            .details p { font-size: 1.1rem; }
+        }
+        .features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        @media (min-width: 500px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+        @media (min-width: 900px) {
+            .features {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .features li {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-right: 3px solid var(--primary-beige);
+            box-shadow: var(--shadow);
+        }
+        /* زر الاتصال */
+        .contact-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--saudi-green);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border: 2px solid transparent;
+            width: 90%;
+            max-width: 350px;
+        }
+        .contact-btn:hover {
+            background: var(--accent-brown);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .contact-btn i {
+            margin-left: 8px;
+        }
+        @media (min-width: 768px) {
+            .contact-btn {
+                padding: 15px 40px;
+                font-size: 1.3rem;
+                width: auto;
+            }
+        }
+        /* التذييل */
+        footer {
+            background: var(--dark-beige);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- الرأس المتحرك -->
+    <header class="site-header" id="mainHeader">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png" alt="رواد المظلات في الأحساء">
+                </a>
+                <div class="logo-text">
+                    <h1>رواد المظلات</h1>
+                    <span>في الأحساء 2026</span>
+                </div>
+            </div>
+            <div class="social-header">
+                <a href="https://www.facebook.com/share/1BSmknBBBo/" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@almizalaat.alahsa?_r=1&_t=ZS-93wBgxolcLV" target="_blank" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/ALMIZ_ALAAT" target="_blank" aria-label="تويتر"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://wa.me/966567045945" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:0567045945">0567045945</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- عنوان الصفحة -->
+        <div class="page-title">
+            <h1>ديكورات داخلية وخارجية</h1>
+            <p>إضفاء لمسات جمالية مبتكرة على المساحات الداخلية والخارجية لتعكس ذوقك الخاص</p>
+        </div>
+
+        <!-- معرض الصور (جميع الروابط التي تعمل) -->
+        <div class="gallery">
+            <!-- 1 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/TPmBgTHk/5409136556695555516-120.jpg" alt="ديكور داخلي فاخر">
+                <figcaption class="gallery-caption">ديكور داخلي فاخر</figcaption>
+            </figure>
+            <!-- 2 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/1z6bwyYC/5409136556695555517-120.jpg" alt="ديكور خارجي">
+                <figcaption class="gallery-caption">ديكور خارجي</figcaption>
+            </figure>
+            <!-- 3 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/s2Sb7300/5409136556695555518-120.jpg" alt="ديكور مداخل">
+                <figcaption class="gallery-caption">ديكور مداخل</figcaption>
+            </figure>
+            <!-- 4 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/KYLCBmHF/5409136556695555519-120.jpg" alt="ديكور مجالس">
+                <figcaption class="gallery-caption">ديكور مجالس</figcaption>
+            </figure>
+            <!-- 5 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/BvDRHJwV/5409136556695555520-121.jpg" alt="ديكور حدائق">
+                <figcaption class="gallery-caption">ديكور حدائق</figcaption>
+            </figure>
+            <!-- 6 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/MGRgVzrC/5409136556695555521-120.jpg" alt="ديكور جلسات خارجية">
+                <figcaption class="gallery-caption">ديكور جلسات خارجية</figcaption>
+            </figure>
+            <!-- 7 (الرابط التالف تم تخطيه) -->
+            <!-- 8 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/jjNBPRFT/5409136556695555523-120.jpg" alt="ديكور اسقف">
+                <figcaption class="gallery-caption">ديكور اسقف</figcaption>
+            </figure>
+            <!-- 9 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/GpY6GbSZ/5409136556695555524-119.jpg" alt="ديكور جدران">
+                <figcaption class="gallery-caption">ديكور جدران</figcaption>
+            </figure>
+            <!-- 10 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/bvb4kqBX/5409136556695555525-119.jpg" alt="ديكور أعمدة">
+                <figcaption class="gallery-caption">ديكور أعمدة</figcaption>
+            </figure>
+            <!-- 11 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/pL3gmmkY/5447603825691791423-121.jpg" alt="ديكور ممرات">
+                <figcaption class="gallery-caption">ديكور ممرات</figcaption>
+            </figure>
+            <!-- 12 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/RZ2jWWGT/5447603825691791424-121.jpg" alt="ديكور واجهات">
+                <figcaption class="gallery-caption">ديكور واجهات</figcaption>
+            </figure>
+            <!-- 13 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/P50BCCK0/5447603825691791425-121.jpg" alt="ديكور داخلي">
+                <figcaption class="gallery-caption">ديكور داخلي</figcaption>
+            </figure>
+            <!-- 14 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/7Zjp55XV/5447603825691791426-119.jpg" alt="ديكور خشبي">
+                <figcaption class="gallery-caption">ديكور خشبي</figcaption>
+            </figure>
+            <!-- 15 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/6pFD88zg/5447603825691791426-121.jpg" alt="ديكور حجري">
+                <figcaption class="gallery-caption">ديكور حجري</figcaption>
+            </figure>
+            <!-- 16 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/xdHBM9F6/5447603825691791427-121.jpg" alt="ديكور إضاءة">
+                <figcaption class="gallery-caption">ديكور إضاءة</figcaption>
+            </figure>
+            <!-- 17 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/7L7j0qQm/5447603825691791428-121.jpg" alt="ديكور حدائق">
+                <figcaption class="gallery-caption">ديكور حدائق</figcaption>
+            </figure>
+            <!-- 18 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/2SgP11T0/5447603825691791429-121-edit-1231204458226580.jpg" alt="ديكور مداخل">
+                <figcaption class="gallery-caption">ديكور مداخل</figcaption>
+            </figure>
+            <!-- 19 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/cLPVvvTD/5447603825691791430-121.jpg" alt="ديكور جلسات">
+                <figcaption class="gallery-caption">ديكور جلسات</figcaption>
+            </figure>
+            <!-- 20 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/DwRtSS5p/5447603825691791431-121.jpg" alt="ديكور خارجي">
+                <figcaption class="gallery-caption">ديكور خارجي</figcaption>
+            </figure>
+            <!-- 21 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/nhN6XXTw/5447603825691791432-121.jpg" alt="ديكور ممرات">
+                <figcaption class="gallery-caption">ديكور ممرات</figcaption>
+            </figure>
+            <!-- 22 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/JzS9ssKs/5447603825691791433-119.jpg" alt="ديكور أرضيات">
+                <figcaption class="gallery-caption">ديكور أرضيات</figcaption>
+            </figure>
+            <!-- 23 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/QdvRFFSp/5447603825691791433-121.jpg" alt="ديكور جدران">
+                <figcaption class="gallery-caption">ديكور جدران</figcaption>
+            </figure>
+            <!-- 24 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/NjZWKKby/5447603825691791435-120.jpg" alt="ديكور اسقف">
+                <figcaption class="gallery-caption">ديكور اسقف</figcaption>
+            </figure>
+            <!-- 25 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/sgbtMMKh/5447603825691791436-120.jpg" alt="ديكور داخلي">
+                <figcaption class="gallery-caption">ديكور داخلي</figcaption>
+            </figure>
+            <!-- 26 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Cx9WRRJD/5447603825691791437-120.jpg" alt="ديكور خارجي">
+                <figcaption class="gallery-caption">ديكور خارجي</figcaption>
+            </figure>
+            <!-- 27 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/P5CgfWbL/5447603825691791438-120.jpg" alt="ديكور حدائق">
+                <figcaption class="gallery-caption">ديكور حدائق</figcaption>
+            </figure>
+            <!-- 28 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/XYrRNfK9/5447603825691791439-120.jpg" alt="ديكور مداخل">
+                <figcaption class="gallery-caption">ديكور مداخل</figcaption>
+            </figure>
+            <!-- 29 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/dVgzhhnL/5447603825691791440-121.jpg" alt="ديكور جلسات">
+                <figcaption class="gallery-caption">ديكور جلسات</figcaption>
+            </figure>
+            <!-- 30 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/9QsvDD1z/5447603825691791441-120.jpg" alt="ديكور إضاءة">
+                <figcaption class="gallery-caption">ديكور إضاءة</figcaption>
+            </figure>
+            <!-- 31 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/52Xh9B5y/5447603825691791442-121.jpg" alt="ديكور خشبي">
+                <figcaption class="gallery-caption">ديكور خشبي</figcaption>
+            </figure>
+            <!-- 32 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Jzsf7N3s/5447603825691791443-121.jpg" alt="ديكور حجري">
+                <figcaption class="gallery-caption">ديكور حجري</figcaption>
+            </figure>
+            <!-- 33 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/sgMkfYPG/5447603825691791444-121.jpg" alt="ديكور واجهات">
+                <figcaption class="gallery-caption">ديكور واجهات</figcaption>
+            </figure>
+            <!-- 34 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/CxR3MGC0/5447603825691791445-121.jpg" alt="ديكور ممرات">
+                <figcaption class="gallery-caption">ديكور ممرات</figcaption>
+            </figure>
+            <!-- 35 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/K816cP7g/5447603825691791447-121.jpg" alt="ديكور جدران">
+                <figcaption class="gallery-caption">ديكور جدران</figcaption>
+            </figure>
+            <!-- 36 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/HkrqWwwf/5447603825691791448-119.jpg" alt="ديكور أرضيات">
+                <figcaption class="gallery-caption">ديكور أرضيات</figcaption>
+            </figure>
+            <!-- 37 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/x1XwjvG0/5447603825691791448-121.jpg" alt="ديكور داخلي">
+                <figcaption class="gallery-caption">ديكور داخلي</figcaption>
+            </figure>
+            <!-- 38 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/X71M0H5j/5447603825691791449-119.jpg" alt="ديكور خارجي">
+                <figcaption class="gallery-caption">ديكور خارجي</figcaption>
+            </figure>
+            <!-- 39 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/7Z5FP31P/5447603825691791450-121.jpg" alt="ديكور حدائق">
+                <figcaption class="gallery-caption">ديكور حدائق</figcaption>
+            </figure>
+            <!-- 40 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/vH2RdqnR/5447603825691791451-119.jpg" alt="ديكور مداخل">
+                <figcaption class="gallery-caption">ديكور مداخل</figcaption>
+            </figure>
+            <!-- 41 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/DwS9frQv/5447603825691791451-121.jpg" alt="ديكور جلسات">
+                <figcaption class="gallery-caption">ديكور جلسات</figcaption>
+            </figure>
+            <!-- 42 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/KvpXyqTF/5447603825691791452-121.jpg" alt="ديكور إضاءة">
+                <figcaption class="gallery-caption">ديكور إضاءة</figcaption>
+            </figure>
+            <!-- 43 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/65bsNjZJ/5447603825691791453-119.jpg" alt="ديكور خشبي">
+                <figcaption class="gallery-caption">ديكور خشبي</figcaption>
+            </figure>
+            <!-- 44 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/8PX8VKv1/5447603825691791453-121.jpg" alt="ديكور حجري">
+                <figcaption class="gallery-caption">ديكور حجري</figcaption>
+            </figure>
+            <!-- 45 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/xTprSxzg/5447603825691791457-119.jpg" alt="ديكور واجهات">
+                <figcaption class="gallery-caption">ديكور واجهات</figcaption>
+            </figure>
+            <!-- 46 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/YqDcwnWP/5447603825691791457-121.jpg" alt="ديكور ممرات">
+                <figcaption class="gallery-caption">ديكور ممرات</figcaption>
+            </figure>
+            <!-- 47 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/QxYLr47Z/5447603825691791458-121.jpg" alt="ديكور جدران">
+                <figcaption class="gallery-caption">ديكور جدران</figcaption>
+            </figure>
+            <!-- 48 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/4N2CTL9j/5447603825691791459-121.jpg" alt="ديكور أرضيات">
+                <figcaption class="gallery-caption">ديكور أرضيات</figcaption>
+            </figure>
+            <!-- 49 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/xTprSxz3/5447603825691791460-121.jpg" alt="ديكور داخلي">
+                <figcaption class="gallery-caption">ديكور داخلي</figcaption>
+            </figure>
+            <!-- 50 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/QxYLr473/5447603825691791461-121.jpg" alt="ديكور خارجي">
+                <figcaption class="gallery-caption">ديكور خارجي</figcaption>
+            </figure>
+            <!-- 51 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/X71M0HCD/5447603825691791462-121.jpg" alt="ديكور حدائق">
+                <figcaption class="gallery-caption">ديكور حدائق</figcaption>
+            </figure>
+            <!-- 52 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/jd3Vrg7F/5447603825691791463-121.jpg" alt="ديكور مداخل">
+                <figcaption class="gallery-caption">ديكور مداخل</figcaption>
+            </figure>
+            <!-- 53 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/yYpqzQZX/5447603825691791464-121.jpg" alt="ديكور جلسات">
+                <figcaption class="gallery-caption">ديكور جلسات</figcaption>
+            </figure>
+            <!-- 54 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/hPZFqyd0/5447603825691791465-121.jpg" alt="ديكور إضاءة">
+                <figcaption class="gallery-caption">ديكور إضاءة</figcaption>
+            </figure>
+            <!-- 55 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/NjQR1q1q/5775925251945467303-121.jpg" alt="ديكور خشبي">
+                <figcaption class="gallery-caption">ديكور خشبي</figcaption>
+            </figure>
+            <!-- 56 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/XYn9wS9R/5775925251945467312-121.jpg" alt="ديكور حجري">
+                <figcaption class="gallery-caption">ديكور حجري</figcaption>
+            </figure>
+            <!-- 57 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/QdjcpGph/IMG-20260205-WA0013.jpg" alt="ديكور داخلي">
+                <figcaption class="gallery-caption">ديكور داخلي</figcaption>
+            </figure>
+            <!-- 58 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/htKV9W9B/IMG-20260205-WA0014.jpg" alt="ديكور خارجي">
+                <figcaption class="gallery-caption">ديكور خارجي</figcaption>
+            </figure>
+            <!-- 59 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/sg35pd5t/IMG-20260205-WA0015.jpg" alt="ديكور حدائق">
+                <figcaption class="gallery-caption">ديكور حدائق</figcaption>
+            </figure>
+            <!-- 60 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/W1s0MLMR/IMG-20260205-WA0016.jpg" alt="ديكور مداخل">
+                <figcaption class="gallery-caption">ديكور مداخل</figcaption>
+            </figure>
+            <!-- 61 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/JzRjbVbm/IMG-20260205-WA0017.jpg" alt="ديكور جلسات">
+                <figcaption class="gallery-caption">ديكور جلسات</figcaption>
+            </figure>
+            <!-- 62 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Bn04MTk7/IMG-20260205-WA0009.jpg" alt="ديكور إضاءة">
+                <figcaption class="gallery-caption">ديكور إضاءة</figcaption>
+            </figure>
+            <!-- 63 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/FH4NDy8W/IMG-20260205-WA0010.jpg" alt="ديكور خشبي">
+                <figcaption class="gallery-caption">ديكور خشبي</figcaption>
+            </figure>
+            <!-- 64 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/XYb4QfmD/IMG-20260205-WA0016.jpg" alt="ديكور حجري">
+                <figcaption class="gallery-caption">ديكور حجري</figcaption>
+            </figure>
+        </div>
+
+        <!-- وصف الخدمة -->
+        <div class="details">
+            <h2>ديكورات داخلية وخارجية فاخرة في الأحساء</h2>
+            <p>في <strong>رواد المظلات بالأحساء</strong>، نقدم أفخم وأجود أنواع الديكورات الداخلية والخارجية التي تضفي لمسة جمالية على منزلك أو مجلسك أو حديقتك. نصمم وننفذ الديكورات بأحدث التصاميم العصرية والكلاسيكية التي تناسب جميع الأذواق.</p>
+            <p>نستخدم أجود الخامات الطبيعية والصناعية في تنفيذ الديكورات، مع مراعاة أعلى معايير الجودة والذوق الرفيع. سواء كنت تبحث عن ديكور للمداخل، المجالس، الحدائق، أو الواجهات، لدينا الحل المثالي.</p>
+            
+            <ul class="features">
+                <li>ديكورات داخلية عصرية</li>
+                <li>ديكورات خارجية فاخرة</li>
+                <li>ديكور مجالس ومداخل</li>
+                <li>ديكور حدائق وممرات</li>
+                <li>إضاءة ديكورية</li>
+                <li>أعمال حجر وخشب</li>
+                <li>تصاميم حسب الطلب</li>
+                <li>تنفيذ سريع ودقيق</li>
+            </ul>
+        </div>
+
+        <!-- زر الاتصال -->
+        <div class="contact-section">
+            <a href="https://wa.me/966567045945" class="contact-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل معنا للاستفسار
+            </a>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <p>© 2026 رواد المظلات في الأحساء - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- كود JavaScript للتحكم في الترويسة -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+  </html>
