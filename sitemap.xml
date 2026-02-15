@@ -56,17 +56,17 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- صفحة هناجر ومستودعات -->
+  <!-- صفحة قرميد -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/hanajir.html</loc>
+    <loc>https://almizalaat5-max.github.io/alm_i_git/qarmid.html</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- صفحة قرميد -->
+  <!-- صفحة هناجر ومستودعات وغرف سندويش بنل -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/qarmid.html</loc>
+    <loc>https://almizalaat5-max.github.io/alm_i_git/hanajit.html</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
