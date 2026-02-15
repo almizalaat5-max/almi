@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>تنسيق حدائق - رواد المظلات الأحساء</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="تصميم وتنسيق الحدائق في الأحساء. نوفر أحدث تصاميم الحدائق المنزلية والمسطحات الخضراء ونظم الري الحديثة.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- خط أميري -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #fcf8f0;
+            color: #3a3a3a;
+            line-height: 1.5;
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        :root {
+            --primary-beige: #d9c5b3;
+            --light-beige: #f5efe7;
+            --dark-beige: #b2967d;
+            --accent-brown: #8b6f4c;
+            --saudi-green: #006C35;
+            --shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            width: 100%;
+            padding: 0 12px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1300px;
+                padding: 0 20px;
+            }
+        }
+        /* الرأس المتحرك */
+        .site-header {
+            background-color: var(--saudi-green);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .site-header.scrolled {
+            background-color: #004d28;
+            padding: 5px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .site-header.scrolled .logo img {
+            height: 35px;
+        }
+        .site-header.scrolled .logo-text h1 {
+            font-size: 1rem;
+        }
+        .site-header.scrolled .logo-text span {
+            font-size: 0.65rem;
+        }
+        .site-header.scrolled .social-header a {
+            font-size: 1rem;
+        }
+        .site-header.scrolled .phone-number {
+            padding: 3px 8px;
+            font-size: 0.75rem;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        @media (min-width: 600px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo img {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            transition: 0.3s;
+        }
+        .logo-text h1 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+            line-height: 1.2;
+            transition: 0.3s;
+        }
+        .logo-text span {
+            font-size: 0.75rem;
+            color: white;
+            opacity: 0.9;
+            display: block;
+            transition: 0.3s;
+        }
+        .social-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .social-header a {
+            color: white;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            padding: 5px;
+        }
+        .social-header a:hover {
+            color: var(--primary-beige);
+            transform: scale(1.1);
+        }
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        .phone-number i {
+            font-size: 0.9rem;
+        }
+        /* عنوان الصفحة */
+        .page-title {
+            text-align: center;
+            margin: 25px 0 15px;
+        }
+        .page-title h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            color: var(--accent-brown);
+            margin-bottom: 8px;
+        }
+        .page-title p {
+            font-size: 1rem;
+            color: #555;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .page-title h1 { font-size: 2.5rem; }
+            .page-title p { font-size: 1.2rem; }
+        }
+        /* معرض الصور */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        @media (min-width: 500px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        @media (min-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 10px;
+            background: var(--light-beige);
+            border-top: 2px solid var(--primary-beige);
+            font-size: 0.85rem;
+            color: var(--accent-brown);
+            font-weight: 500;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .gallery-caption {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+        /* قسم التفاصيل */
+        .details {
+            background: var(--light-beige);
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 1px solid var(--primary-beige);
+        }
+        .details h2 {
+            font-size: 1.6rem;
+            color: var(--accent-brown);
+            margin-bottom: 15px;
+            font-family: 'Amiri', serif;
+        }
+        .details p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        @media (min-width: 768px) {
+            .details {
+                padding: 40px;
+            }
+            .details h2 { font-size: 2rem; }
+            .details p { font-size: 1.1rem; }
+        }
+        .features {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        @media (min-width: 500px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+        @media (min-width: 900px) {
+            .features {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .features li {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-right: 3px solid var(--primary-beige);
+            box-shadow: var(--shadow);
+        }
+        /* زر الاتصال */
+        .contact-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--saudi-green);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border: 2px solid transparent;
+            width: 90%;
+            max-width: 350px;
+        }
+        .contact-btn:hover {
+            background: var(--accent-brown);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .contact-btn i {
+            margin-left: 8px;
+        }
+        @media (min-width: 768px) {
+            .contact-btn {
+                padding: 15px 40px;
+                font-size: 1.3rem;
+                width: auto;
+            }
+        }
+        /* التذييل */
+        footer {
+            background: var(--dark-beige);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- الرأس المتحرك -->
+    <header class="site-header" id="mainHeader">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png" alt="رواد المظلات في الأحساء">
+                </a>
+                <div class="logo-text">
+                    <h1>رواد المظلات</h1>
+                    <span>في الأحساء 2026</span>
+                </div>
+            </div>
+            <div class="social-header">
+                <a href="https://www.facebook.com/share/1BSmknBBBo/" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/almiz_alaat?igsh=MXVuMmx1dngwaWJyMw==" target="_blank" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@almizalaat.alahsa?_r=1&_t=ZS-93wBgxolcLV" target="_blank" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/ALMIZ_ALAAT" target="_blank" aria-label="تويتر"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://wa.me/966567045945" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:0567045945">0567045945</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- عنوان الصفحة -->
+        <div class="page-title">
+            <h1>تنسيق حدائق</h1>
+            <p>تصميم وتنفيذ حدائق ساحرة تتناغم فيها النباتات مع عناصر الظل والماء في الأحساء</p>
+        </div>
+
+        <!-- معرض الصور (جميع الروابط التي تعمل) -->
+        <div class="gallery">
+            <!-- 1 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/XJ1h0XZs/5289875884800150545-121.jpg" alt="تصميم حدائق">
+                <figcaption class="gallery-caption">تصميم حدائق</figcaption>
+            </figure>
+            <!-- 2 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/kGVHM98W/5289875884800150546-121.jpg" alt="حديقة منزلية">
+                <figcaption class="gallery-caption">حديقة منزلية</figcaption>
+            </figure>
+            <!-- 3 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/B67yGt8C/5296776303811955549-121.jpg" alt="مسطحات خضراء">
+                <figcaption class="gallery-caption">مسطحات خضراء</figcaption>
+            </figure>
+            <!-- 4 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/d1NXKD7j/5296776303811955550-121.jpg" alt="نافورة حديقة">
+                <figcaption class="gallery-caption">نافورة حديقة</figcaption>
+            </figure>
+            <!-- 5 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/FRCqQ1f3/5296776303811955551-121.jpg" alt="إضاءة ليلية">
+                <figcaption class="gallery-caption">إضاءة ليلية</figcaption>
+            </figure>
+            <!-- 6 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/rmZbLzdW/5296776303811955552-121.jpg" alt="ممرات حجرية">
+                <figcaption class="gallery-caption">ممرات حجرية</figcaption>
+            </figure>
+            <!-- 7 (الرابط التالف تم تخطيه) -->
+            <!-- 8 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/d1NXKD7R/5296776303811955554-121.jpg" alt="نخيل وزهور">
+                <figcaption class="gallery-caption">نخيل وزهور</figcaption>
+            </figure>
+            <!-- 9 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/vB2jdD1V/5296776303811955561-121.jpg" alt="برجولات حدائق">
+                <figcaption class="gallery-caption">برجولات حدائق</figcaption>
+            </figure>
+            <!-- 10 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/FRCqQ1fS/5296776303811955562-121.jpg" alt="شلالات صناعية">
+                <figcaption class="gallery-caption">شلالات صناعية</figcaption>
+            </figure>
+            <!-- 11 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/hjZwqhJX/5296776303811955563-121.jpg" alt="أنظمة ري حديثة">
+                <figcaption class="gallery-caption">أنظمة ري حديثة</figcaption>
+            </figure>
+            <!-- 12 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/ZRsgh09R/5296776303811955577-121.jpg" alt="حدائق عصرية">
+                <figcaption class="gallery-caption">حدائق عصرية</figcaption>
+            </figure>
+            <!-- 13 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/0QX3qr6r/5296776303811955579-121.jpg" alt="جلسات خارجية">
+                <figcaption class="gallery-caption">جلسات خارجية</figcaption>
+            </figure>
+            <!-- 14 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/qRDYdgtq/5296776303811955581-119.jpg" alt="مساحات خضراء واسعة">
+                <figcaption class="gallery-caption">مساحات خضراء واسعة</figcaption>
+            </figure>
+            <!-- 15 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/sXg8852x/5375329327215480896-121.jpg" alt="نافورة مع إضاءة">
+                <figcaption class="gallery-caption">نافورة مع إضاءة</figcaption>
+            </figure>
+            <!-- 16 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/d1VXXG0t/5375329327215480898-119.jpg" alt="تصميم حديقة">
+                <figcaption class="gallery-caption">تصميم حديقة</figcaption>
+            </figure>
+            <!-- 17 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/1t3TTDz4/5375329327215480899-121.jpg" alt="نخيل مع إضاءة">
+                <figcaption class="gallery-caption">نخيل مع إضاءة</figcaption>
+            </figure>
+            <!-- 18 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/nzS5tMsF/5375329327215480901-121.jpg" alt="ممرات خشبية">
+                <figcaption class="gallery-caption">ممرات خشبية</figcaption>
+            </figure>
+            <!-- 19 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/rmZbLzdy/5375329327215480902-121.jpg" alt="نافورة حجرية">
+                <figcaption class="gallery-caption">نافورة حجرية</figcaption>
+            </figure>
+            <!-- 20 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/rmwbb5pm/5375329327215480903-121.jpg" alt="حديقة مع برجولات">
+                <figcaption class="gallery-caption">حديقة مع برجولات</figcaption>
+            </figure>
+            <!-- 21 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/zB2M13LJ/5375329327215480904-121.jpg" alt="إضاءة حدائق">
+                <figcaption class="gallery-caption">إضاءة حدائق</figcaption>
+            </figure>
+            <!-- 22 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/cHLjjfJK/5375329327215480905-121.jpg" alt="تصميم حدائق عصري">
+                <figcaption class="gallery-caption">تصميم حدائق عصري</figcaption>
+            </figure>
+            <!-- 23 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Ssx55cK2/5375329327215480908-121.jpg" alt="نخيل وزهور ملونة">
+                <figcaption class="gallery-caption">نخيل وزهور ملونة</figcaption>
+            </figure>
+            <!-- 24 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/j5S99yjS/5377619498266988825-120.jpg" alt="مسطحات خضراء">
+                <figcaption class="gallery-caption">مسطحات خضراء</figcaption>
+            </figure>
+            <!-- 25 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/fLRFFYb4/5377619498266988826-121.jpg" alt="نافورة حديثة">
+                <figcaption class="gallery-caption">نافورة حديثة</figcaption>
+            </figure>
+            <!-- 26 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Kz8VVtYb/5377619498266988827-121.jpg" alt="تصميم حديقة">
+                <figcaption class="gallery-caption">تصميم حديقة</figcaption>
+            </figure>
+            <!-- 27 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Y9CVVQSt/5377619498266988828-121.jpg" alt="حديقة مع إضاءة">
+                <figcaption class="gallery-caption">حديقة مع إضاءة</figcaption>
+            </figure>
+            <!-- 28 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/sXg8852V/5377619498266988829-121.jpg" alt="ممرات حديقة">
+                <figcaption class="gallery-caption">ممرات حديقة</figcaption>
+            </figure>
+            <!-- 29 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/DZwDD1wt/IMG-20260118-WA0010.jpg" alt="نخيل">
+                <figcaption class="gallery-caption">نخيل</figcaption>
+            </figure>
+            <!-- 30 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/rmwbb5wB/IMG-20260118-WA0011.jpg" alt="زهور ملونة">
+                <figcaption class="gallery-caption">زهور ملونة</figcaption>
+            </figure>
+            <!-- 31 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/bJwMM1wW/IMG-20260118-WA0012.jpg" alt="حديقة منزلية">
+                <figcaption class="gallery-caption">حديقة منزلية</figcaption>
+            </figure>
+            <!-- 32 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/XJYhh9YP/IMG-20260118-WA0013.jpg" alt="جلسة حديقة">
+                <figcaption class="gallery-caption">جلسة حديقة</figcaption>
+            </figure>
+            <!-- 33 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Tw3SSn34/IMG-20260118-WA0014.jpg" alt="نافورة صغيرة">
+                <figcaption class="gallery-caption">نافورة صغيرة</figcaption>
+            </figure>
+            <!-- 34 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/cHLjjfLk/IMG-20260118-WA0015.jpg" alt="إضاءة حديقة">
+                <figcaption class="gallery-caption">إضاءة حديقة</figcaption>
+            </figure>
+            <!-- 35 -->
+            <figure class="gallery-item">
+                <img src="https://i.postimg.cc/Px5cc153/IMG-20260118-WA0016.jpg" alt="تصميم حدائق">
+                <figcaption class="gallery-caption">تصميم حدائق</figcaption>
+            </figure>
+        </div>
+
+        <!-- وصف الخدمة -->
+        <div class="details">
+            <h2>تصميم وتنسيق حدائق فاخرة في الأحساء</h2>
+            <p>في <strong>رواد المظلات بالأحساء</strong>، نقدم خدمات متكاملة لتصميم وتنسيق الحدائق. نصمم حدائق ساحرة تتناغم فيها النباتات مع عناصر الظل والماء، لتخلق مساحة خارجية مريحة وجميلة تناسب ذوقك وتتناغم مع مناخ الأحساء.</p>
+            <p>نستخدم أحدث أنظمة الري وأجود أنواع النباتات المناسبة للبيئة المحلية، مع إضافة لمسات جمالية من ممرات حجرية ونوافير وإضاءة ليلية. سواء كنت تبحث عن حديقة منزلية أو مسطحات خضراء واسعة، لدينا الحل المثالي.</p>
+            
+            <ul class="features">
+                <li>تصميم حدائق حسب الطلب</li>
+                <li>أحدث أنظمة الري الذكية</li>
+                <li>نباتات وأشجار محلية</li>
+                <li>نوافير وشلالات</li>
+                <li>إضاءة ليلية جذابة</li>
+                <li>ممرات حجرية وخشبية</li>
+                <li>برجولات ومظلات</li>
+                <li>صيانة دورية</li>
+            </ul>
+        </div>
+
+        <!-- زر الاتصال -->
+        <div class="contact-section">
+            <a href="https://wa.me/966567045945" class="contact-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل معنا للاستفسار
+            </a>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <p>© 2026 رواد المظلات في الأحساء - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- كود JavaScript للتحكم في الترويسة -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+                  </html>
