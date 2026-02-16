@@ -1,74 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- الصفحة الرئيسية -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/</loc>
+    <loc>https://almizalaat5-max.github.io/almi/index.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
-  
-  <!-- صفحة خيام ملكية وبيوت شعر -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/khayam.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/brjulat.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة برجولات -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/brjulat.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/decorat.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة سواتر -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/sawatir.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/hanajit.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة تنسيق حدائق -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/tansiq-hadayeq.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/khayam.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة ديكورات داخلية وخارجية -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/decorat.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/mazallat.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة مظلات سيارات ومسابح -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/mazallat.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/qarmid.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة قرميد -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/qarmid.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/sawatir.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-  
-  <!-- صفحة هناجر ومستودعات وغرف سندويش بنل -->
   <url>
-    <loc>https://almizalaat5-max.github.io/alm_i_git/hanajit.html</loc>
+    <loc>https://almizalaat5-max.github.io/almi/tansiq-hadayeq.html</loc>
     <lastmod>2026-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
