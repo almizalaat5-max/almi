@@ -1,10 +1,4 @@
-# ملف robots.txt لموقع رواد المظلات في الأحساء
-# المستضاف على GitHub Pages
-# التاريخ: 2026-02-16
-
-# السماح لجميع محركات البحث بزيارة جميع الصفحات
 User-agent: *
 Allow: /
 
-# تحديد موقع ملف خريطة الموقع (Sitemap)
-Sitemap: https://almizalaat5-max.github.io/alm_i_git/sitemap.xml
+Sitemap: https://example.com/sitemap.xml
