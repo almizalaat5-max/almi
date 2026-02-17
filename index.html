@@ -19,7 +19,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png">
     <style>
-        /* الأنماط كما هي دون تغيير */
+        /* الأنماط الأساسية */
         * {
             margin: 0;
             padding: 0;
@@ -44,10 +44,21 @@
             --hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
             --saudi-green: #006C35;
         }
+        /* حماية الصور */
         img {
             max-width: 100%;
             height: auto;
             display: block;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none; /* تمنع التفاعل مع الصورة ولكن الرابط الأب يعمل */
         }
         a {
             text-decoration: none;
@@ -427,6 +438,21 @@
             opacity: 0.7;
             margin-top: 20px;
         }
+        /* اسم المصمم */
+        .designer-credit {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-top: 10px;
+            letter-spacing: 0.3px;
+        }
+        .designer-credit a {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .designer-credit a:hover {
+            opacity: 0.9;
+        }
         .floating-buttons {
             position: fixed;
             bottom: 15px;
@@ -507,7 +533,7 @@
             <div class="swiper-wrapper">
                 <!-- 1. خيام ملكية - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/m2kLMF36/IMG-20260118-WA0017.jpg" alt="خيام ملكية فاخرة مع إضاءة داخلية في الأحساء">
+                    <img src="https://i.postimg.cc/m2kLMF36/IMG-20260118-WA0017.jpg" alt="خيام ملكية فاخرة مع إضاءة داخلية في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>خيام ملكية وبيوت شعر</h3>
                         <p>مجالس خارجية بتصاميم تراثية وعصرية تناسب كرم الضيافة في الأحساء.</p>
@@ -515,7 +541,7 @@
                 </div>
                 <!-- 2. خيام ملكية - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/yYx19SX8/IMG-20260118-WA0000.jpg" alt="بيوت شعر عصرية مع مدخل مضيء في الأحساء">
+                    <img src="https://i.postimg.cc/yYx19SX8/IMG-20260118-WA0000.jpg" alt="بيوت شعر عصرية مع مدخل مضيء في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>بيوت شعر عصرية</h3>
                         <p>تصاميم تجمع بين الأصالة والرفاهية، مصممة خصيصاً لأجواء الأحساء.</p>
@@ -523,7 +549,7 @@
                 </div>
                 <!-- 3. سواتر - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/TwbkBQ6T/IMG-20260118-WA0006.jpg" alt="سواتر خشب وحديد للخصوصية في الأحساء">
+                    <img src="https://i.postimg.cc/TwbkBQ6T/IMG-20260118-WA0006.jpg" alt="سواتر خشب وحديد للخصوصية في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>سواتر خشب وحديد</h3>
                         <p>حلول عملية وأنيقة للسواتر بمختلف الأشكال لضمان الخصوصية والأمان.</p>
@@ -531,7 +557,7 @@
                 </div>
                 <!-- 4. سواتر - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/k4SjLwmm/s3.jpg" alt="سواتر حديثة للمجالس والحدائق في الأحساء">
+                    <img src="https://i.postimg.cc/k4SjLwmm/s3.jpg" alt="سواتر حديثة للمجالس والحدائق في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>سواتر حديثة</h3>
                         <p>تشكيلة واسعة من السواتر الخشبية والمعدنية للمجالس والحدائق.</p>
@@ -539,7 +565,7 @@
                 </div>
                 <!-- 5. تنسيق حدائق - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/Kz8VVtYb/5377619498266988827-121.jpg" alt="تصميم وتنسيق حدائق في الأحساء">
+                    <img src="https://i.postimg.cc/Kz8VVtYb/5377619498266988827-121.jpg" alt="تصميم وتنسيق حدائق في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>تصميم حدائق</h3>
                         <p>تصميم وتنفيذ حدائق ساحرة مع أحدث أنظمة الري.</p>
@@ -547,7 +573,7 @@
                 </div>
                 <!-- 6. تنسيق حدائق - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/Y9CVVQSt/5377619498266988828-121.jpg" alt="حدائق خلابة مع مسطحات خضراء في الأحساء">
+                    <img src="https://i.postimg.cc/Y9CVVQSt/5377619498266988828-121.jpg" alt="حدائق خلابة مع مسطحات خضراء في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>مساحات خضراء</h3>
                         <p>مساحات خضراء خلابة مع أجود أنواع النباتات.</p>
@@ -555,7 +581,7 @@
                 </div>
                 <!-- 7. برجولات - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg" alt="برجولات خشبية عصرية في الأحساء">
+                    <img src="https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg" alt="برجولات خشبية عصرية في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>برجولات خشبية</h3>
                         <p>أجواء طبيعية مع برجولات توفر الظل والخصوصية.</p>
@@ -563,7 +589,7 @@
                 </div>
                 <!-- 8. برجولات - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/ncp7tTJC/5375329327215480816-119.jpg" alt="برجولات خشب طبيعي مع إضاءة ليلية في الأحساء">
+                    <img src="https://i.postimg.cc/ncp7tTJC/5375329327215480816-119.jpg" alt="برجولات خشب طبيعي مع إضاءة ليلية في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>برجولات خشب طبيعي</h3>
                         <p>خشب طبيعي معالج وتصاميم تناسب جميع الأذواق.</p>
@@ -571,7 +597,7 @@
                 </div>
                 <!-- 9. ديكورات داخلية وخارجية - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/s2Sb7300/5409136556695555518-120.jpg" alt="ديكورات داخلية فاخرة في الأحساء">
+                    <img src="https://i.postimg.cc/s2Sb7300/5409136556695555518-120.jpg" alt="ديكورات داخلية فاخرة في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>ديكورات داخلية وخارجية</h3>
                         <p>إضفاء لمسات جمالية مبتكرة على المساحات الداخلية والخارجية.</p>
@@ -579,7 +605,7 @@
                 </div>
                 <!-- 10. ديكورات داخلية وخارجية - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/TPmBgTHk/5409136556695555516-120.jpg" alt="ديكورات خارجية عصرية في الأحساء">
+                    <img src="https://i.postimg.cc/TPmBgTHk/5409136556695555516-120.jpg" alt="ديكورات خارجية عصرية في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>ديكورات عصرية</h3>
                         <p>تصاميم عصرية من المدخل إلى الحديقة.</p>
@@ -587,7 +613,7 @@
                 </div>
                 <!-- 11. مظلات - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/wTZNZz0n/IMG-20260118-WA0031.jpg" alt="مظلات سيارات ومسابح في الأحساء">
+                    <img src="https://i.postimg.cc/wTZNZz0n/IMG-20260118-WA0031.jpg" alt="مظلات سيارات ومسابح في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>مظلات سيارات</h3>
                         <p>حماية سيارتك من حرارة الشمس مع تصاميم عصرية.</p>
@@ -595,7 +621,7 @@
                 </div>
                 <!-- 12. مظلات - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/WbCZCV5P/IMG-20260118-WA0029.jpg" alt="مظلات متحركة وثابتة في الأحساء">
+                    <img src="https://i.postimg.cc/WbCZCV5P/IMG-20260118-WA0029.jpg" alt="مظلات متحركة وثابتة في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>مظلات متحركة وثابتة</h3>
                         <p>مظلات بمواد عازلة للحرارة تناسب جميع الاستخدامات.</p>
@@ -603,7 +629,7 @@
                 </div>
                 <!-- 13. مظلات - صورة 3 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/Cx88V22f/5361556363529621698-120.jpg" alt="تشكيلة مظلات متنوعة في الأحساء">
+                    <img src="https://i.postimg.cc/Cx88V22f/5361556363529621698-120.jpg" alt="تشكيلة مظلات متنوعة في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>تشكيلة واسعة</h3>
                         <p>مظلات بأشكال وأحجام مختلفة تناسب كافة الأذواق.</p>
@@ -611,7 +637,7 @@
                 </div>
                 <!-- 14. هناجر ومستودعات - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572-120.jpg" alt="هناجر صناعية في الأحساء">
+                    <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572-120.jpg" alt="هناجر صناعية في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>هناجر ومستودعات</h3>
                         <p>إنشاءات متكاملة للمشاريع التجارية والصناعية بجودة عالية.</p>
@@ -619,7 +645,7 @@
                 </div>
                 <!-- 15. هناجر ومستودعات - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/9XvFjfHb/5285107341525191576-119.jpg" alt="غرف سندويش بنل جاهزة في الأحساء">
+                    <img src="https://i.postimg.cc/9XvFjfHb/5285107341525191576-119.jpg" alt="غرف سندويش بنل جاهزة في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>غرف سندويش بنل</h3>
                         <p>غرف سندويش بنل ومستودعات بأعلى معايير الجودة.</p>
@@ -627,7 +653,7 @@
                 </div>
                 <!-- 16. قرميد - صورة 1 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg" alt="قرميد إسباني ووطني في الأحساء">
+                    <img src="https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg" alt="قرميد إسباني ووطني في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>قرميد إسباني ووطني</h3>
                         <p>لمسة جمالية راقية لأسطح المنازل والمجالس.</p>
@@ -635,7 +661,7 @@
                 </div>
                 <!-- 17. قرميد - صورة 2 -->
                 <div class="swiper-slide">
-                    <img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818-121.jpg" alt="أسطح قرميد بألوان متعددة في الأحساء">
+                    <img src="https://i.postimg.cc/SsRTVqZQ/5447603825691790818-121.jpg" alt="أسطح قرميد بألوان متعددة في الأحساء" draggable="false">
                     <div class="slide-caption">
                         <h3>أسطح قرميد</h3>
                         <p>أسطح قرميد بألوان متعددة مقاومة للعوامل الجوية.</p>
@@ -662,7 +688,7 @@
             <!-- خيام - رابط إلى khayam.html -->
             <a href="khayam.html" class="service-card" aria-label="خيام ملكية وبيوت شعر فاخرة في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/m2kLMF36/IMG-20260118-WA0017.jpg" alt="خيام ملكية وبيوت شعر في الأحساء">
+                    <img src="https://i.postimg.cc/m2kLMF36/IMG-20260118-WA0017.jpg" alt="خيام ملكية وبيوت شعر في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>خيام ملكية وبيوت شعر</h3>
@@ -672,7 +698,7 @@
             <!-- برجولات - رابط إلى brjulat.html -->
             <a href="brjulat.html" class="service-card" aria-label="برجولات خشبية عصرية في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg" alt="برجولات خشبية في الأحساء">
+                    <img src="https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg" alt="برجولات خشبية في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>برجولات خشبية</h3>
@@ -682,7 +708,7 @@
             <!-- سواتر - رابط إلى sawatir.html -->
             <a href="sawatir.html" class="service-card" aria-label="سواتر خشب وحديد للخصوصية في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/TwbkBQ6T/IMG-20260118-WA0006.jpg" alt="سواتر خشب وحديد في الأحساء">
+                    <img src="https://i.postimg.cc/TwbkBQ6T/IMG-20260118-WA0006.jpg" alt="سواتر خشب وحديد في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>سواتر خشب وحديد</h3>
@@ -692,7 +718,7 @@
             <!-- تنسيق حدائق - رابط إلى tansiq-hadayeq.html -->
             <a href="tansiq-hadayeq.html" class="service-card" aria-label="تنسيق وتصميم حدائق في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/Kz8VVtYb/5377619498266988827-121.jpg" alt="تنسيق حدائق في الأحساء">
+                    <img src="https://i.postimg.cc/Kz8VVtYb/5377619498266988827-121.jpg" alt="تنسيق حدائق في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>تنسيق حدائق</h3>
@@ -702,7 +728,7 @@
             <!-- ديكورات - رابط إلى decorat.html -->
             <a href="decorat.html" class="service-card" aria-label="ديكورات داخلية وخارجية في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/s2Sb7300/5409136556695555518-120.jpg" alt="ديكورات داخلية وخارجية في الأحساء">
+                    <img src="https://i.postimg.cc/s2Sb7300/5409136556695555518-120.jpg" alt="ديكورات داخلية وخارجية في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>ديكورات داخلية وخارجية</h3>
@@ -712,7 +738,7 @@
             <!-- مظلات - رابط إلى mazallat.html -->
             <a href="mazallat.html" class="service-card" aria-label="مظلات سيارات ومسابح في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/wTZNZz0n/IMG-20260118-WA0031.jpg" alt="مظلات سيارات في الأحساء">
+                    <img src="https://i.postimg.cc/wTZNZz0n/IMG-20260118-WA0031.jpg" alt="مظلات سيارات في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>مظلات سيارات</h3>
@@ -722,17 +748,17 @@
             <!-- قرميد - رابط إلى qarmid.html -->
             <a href="qarmid.html" class="service-card" aria-label="قرميد إسباني ووطني في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg" alt="قرميد إسباني ووطني في الأحساء">
+                    <img src="https://i.postimg.cc/XJqHx32M/5447603825691790822-121.jpg" alt="قرميد إسباني ووطني في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>قرميد</h3>
                     <p>لمسة جمالية لأسطح المنازل تجمع بين العزل والأناقة.</p>
                 </div>
             </a>
-            <!-- هناجر - رابط إلى hanajit.html (بناءً على اسم الملف في الصورة) -->
+            <!-- هناجر - رابط إلى hanajit.html -->
             <a href="hanajit.html" class="service-card" aria-label="هناجر ومستودعات وغرف سندويش بنل في الأحساء">
                 <div class="service-img">
-                    <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572-120.jpg" alt="هناجر ومستودعات في الأحساء">
+                    <img src="https://i.postimg.cc/yYc66z7p/5285107341525191572-120.jpg" alt="هناجر ومستودعات في الأحساء" draggable="false">
                 </div>
                 <div class="service-info">
                     <h3>هناجر ومستودعات</h3>
@@ -768,7 +794,7 @@
         <h2>نغطي جميع أحياء الأحساء</h2>
         <div class="map-container">
             <div class="map-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Saudi_Arabia_relief_location_map.jpg/800px-Saudi_Arabia_relief_location_map.jpg" alt="خريطة الأحساء">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Saudi_Arabia_relief_location_map.jpg/800px-Saudi_Arabia_relief_location_map.jpg" alt="خريطة الأحساء" draggable="false">
             </div>
             <div class="neighborhoods">
                 <h3>الأحياء التي نغطيها</h3>
@@ -790,7 +816,7 @@
         </div>
     </section>
 
-    <!-- التذييل مع رابط خرائط جوجل -->
+    <!-- التذييل مع رابط خرائط جوجل واسم المصمم -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -817,6 +843,10 @@
             </div>
             <div class="copyright">
                 © 2026 رواد المظلات في الأحساء
+            </div>
+            <!-- اسم المصمم -->
+            <div class="designer-credit">
+                تصميم <a href="#" target="_blank">سليمان الحكمي</a> 0551987351
             </div>
         </div>
     </footer>
@@ -848,6 +878,22 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+
+        // منع النقر بزر الماوس الأيمن على الصور فقط
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                return false;
+            });
+        });
+
+        // منع اختصارات لوحة المفاتيح لنسخ الصور
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 's' || e.key === 'p')) {
+                e.preventDefault();
+                return false;
+            }
+        });
     </script>
 </body>
-                    </html>
+</html>
