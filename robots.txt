@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://almizalaat5-max.github.io/almi/sitemap.xml
