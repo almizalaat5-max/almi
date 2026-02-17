@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>مظلات سيارات ومسابح - رواد المظلات الأحساء</title>
     <!-- تحسين محركات البحث -->
-    <meta name="description" content="أفضل وأجود أنواع المظلات للسيارات والمسابح في الأحساء. مظلات متحركة وثابتة بمواد عازلة للحرارة والرطوبة.">
+    <meta name="description" content="أفضل وأجود أنواع المظلات للسيارات والمسابح في الأحساء. مظلات متحركة وثابتة بمواد عازلة للحرارة والرطوبة. أكثر من 120 تصميم مظلة حديثة.">
+    <!-- كلمات مفتاحية إضافية لتحسين SEO -->
+    <meta name="keywords" content="مظلات سيارات, مظلات مسابح, مظلات الأحساء, مظلات متحركة, مظلات ثابتة, مظلات سيارات الأحساء, مظلات مسابح الأحساء, تركيب مظلات, مظلات حديد, مظلات خشبية, مظلات قماشية, مظلات pvc, مظلات متحركة للسيارات, مظلات سيارات حديثة, مظلات مسابح حديثة, مظلات مداخل, مظلات حدائق, مظلات خارجية, مظلات داخلية, مظلات مدارس, مظلات مساجد, مظلات مستشفيات, مظلات شركات, مظلات فلل, مظلات قصور, مظلات استراحات, مظلات شاليهات, مظلات مطاعم, مظلات مقاهي, مظلات فنادق, مظلات مواقف سيارات, مظلات سيارات منزلية, مظلات سيارات كهربائية, مظلات سيارات يدوية, مظلات سيارات متحركة, مظلات سيارات ثابتة, مظلات سيارات حديد, مظلات سيارات خشب, مظلات سيارات قماش, مظلات سيارات pvc, مظلات سيارات بولي كربونيت, مظلات سيارات شمسية, مظلات سيارات مطر, مظلات سيارات غبار, مظلات سيارات حرارة, مظلات مسابح كهربائية, مظلات مسابح يدوية, مظلات مسابح متحركة, مظلات مسابح ثابتة, مظلات مسابح حديد, مظلات مسابح خشب, مظلات مسابح قماش, مظلات مسابح pvc, مظلات مسابح بولي كربونيت, مظلات مسابح شمسية, مظلات مسابح مطر, مظلات مسابح أطفال, مظلات مسابح كبار, مظلات مسابح عامة, مظلات مسابح خاصة, مظلات مسابح فنادق, مظلات مسابح منتجعات, مظلات مسابح قصور, مظلات مسابح فلل, مظلات مسابح استراحات, مظلات مسابح شاليهات, مظلات مسابح مطاعم, مظلات مسابح مقاهي, مظلات مقاومة للحرارة, مظلات مقاومة للأمطار, مظلات مقاومة للغبار, مظلات مقاومة للرياح, مظلات مقاومة للرطوبة, مظلات مقاومة للأشعة, مظلات عازلة للحرارة, مظلات عازلة للماء, مظلات عازلة للصوت, مظلات عازلة للغبار">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- خط أميري -->
@@ -13,7 +15,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/Ss3tVFdZ/shʿar-almwqʿ-rwad-almzlat-fy-alahsaʾ.png">
     <style>
-        /* الأنماط كما هي سابقاً (تم حذفها من هذا الرد للاختصار، ولكنها موجودة في الكود الكامل) */
+        /* reset وقواعد أساسية */
         * {
             margin: 0;
             padding: 0;
@@ -35,10 +37,21 @@
             --saudi-green: #006C35;
             --shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
+        /* حماية الصور */
         img {
             max-width: 100%;
             height: auto;
             display: block;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none;
         }
         a {
             text-decoration: none;
@@ -55,44 +68,18 @@
                 padding: 0 20px;
             }
         }
-        /* الرأس المتحرك */
+        /* الرأس - غير مثبت */
         .site-header {
             background-color: var(--saudi-green);
             padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
             width: 100%;
-            transition: all 0.3s ease;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .site-header.scrolled {
-            background-color: #004d28;
-            padding: 5px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .site-header.scrolled .logo img {
-            height: 35px;
-        }
-        .site-header.scrolled .logo-text h1 {
-            font-size: 1rem;
-        }
-        .site-header.scrolled .logo-text span {
-            font-size: 0.65rem;
-        }
-        .site-header.scrolled .social-header a {
-            font-size: 1rem;
-        }
-        .site-header.scrolled .phone-number {
-            padding: 3px 8px;
-            font-size: 0.75rem;
         }
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 8px;
-            transition: 0.3s;
         }
         @media (min-width: 600px) {
             .header-content {
@@ -109,21 +96,18 @@
             height: 45px;
             width: auto;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-            transition: 0.3s;
         }
         .logo-text h1 {
             font-size: 1.2rem;
             color: white;
             font-weight: 600;
             line-height: 1.2;
-            transition: 0.3s;
         }
         .logo-text span {
             font-size: 0.75rem;
             color: white;
             opacity: 0.9;
             display: block;
-            transition: 0.3s;
         }
         .social-header {
             display: flex;
@@ -151,7 +135,6 @@
             padding: 5px 10px;
             border-radius: 30px;
             font-size: 0.85rem;
-            transition: 0.3s;
             white-space: nowrap;
         }
         .phone-number i {
@@ -178,7 +161,7 @@
             .page-title h1 { font-size: 2.5rem; }
             .page-title p { font-size: 1.2rem; }
         }
-        /* معرض الصور */
+        /* معرض الصور مع طبقة حماية */
         .gallery {
             display: grid;
             grid-template-columns: 1fr;
@@ -208,16 +191,31 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: 0.3s;
+            position: relative;
         }
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        /* طبقة شفافة فوق الصورة */
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
+            pointer-events: none;
         }
         .gallery-item img {
             width: 100%;
             aspect-ratio: 4/3;
             object-fit: cover;
             display: block;
+            position: relative;
+            z-index: 1;
         }
         .gallery-caption {
             padding: 10px;
@@ -227,6 +225,8 @@
             color: var(--accent-brown);
             font-weight: 500;
             text-align: center;
+            position: relative;
+            z-index: 3;
         }
         @media (min-width: 768px) {
             .gallery-caption {
@@ -287,6 +287,90 @@
             border-right: 3px solid var(--primary-beige);
             box-shadow: var(--shadow);
         }
+        /* قسم روابط الخدمات */
+        .services-links {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--primary-beige);
+        }
+        .services-links h2 {
+            font-size: 1.8rem;
+            color: var(--saudi-green);
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+            text-align: center;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .links-grid a {
+            display: block;
+            background: var(--light-beige);
+            color: var(--accent-brown);
+            padding: 12px 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+        .links-grid a:hover {
+            background: var(--saudi-green);
+            color: white;
+            border-color: var(--primary-beige);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,108,53,0.2);
+        }
+        @media (min-width: 768px) {
+            .links-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            .links-grid a {
+                padding: 15px;
+                font-size: 1.1rem;
+            }
+        }
+        /* قسم المحتوى الثري */
+        .seo-content {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--primary-beige);
+        }
+        .seo-content h2 {
+            font-size: 1.8rem;
+            color: var(--saudi-green);
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+            text-align: center;
+        }
+        .seo-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: justify;
+        }
+        .seo-content strong {
+            color: var(--accent-brown);
+        }
+        @media (min-width: 768px) {
+            .seo-content {
+                padding: 40px;
+            }
+            .seo-content p {
+                font-size: 1.1rem;
+            }
+        }
         /* زر الاتصال */
         .contact-section {
             text-align: center;
@@ -319,21 +403,43 @@
                 width: auto;
             }
         }
-        /* التذييل */
+        /* التذييل مع اسم المصمم */
         footer {
             background: var(--dark-beige);
             color: white;
-            padding: 25px 0;
+            padding: 25px 0 15px;
             text-align: center;
             margin-top: 50px;
         }
         footer p {
             font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        .designer-credit {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+        }
+        .designer-credit a {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .designer-credit a:hover {
+            opacity: 0.9;
+        }
+        @media (min-width: 768px) {
+            .contact-btn {
+                padding: 15px 40px;
+                font-size: 1.3rem;
+                width: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- الرأس المتحرك -->
+    <!-- الرأس (غير مثبت) -->
     <header class="site-header" id="mainHeader">
         <div class="container header-content">
             <div class="logo">
@@ -366,642 +472,641 @@
             <p>أجود أنواع المظلات الثابتة والمتحركة لحماية السيارات والمسابح من العوامل الجوية في الأحساء</p>
         </div>
 
-        <!-- معرض الصور - أول صورتين هما الجديدتان -->
+        <!-- معرض الصور مع حماية -->
         <div class="gallery">
             <!-- 1 - الصورة الأولى الجديدة -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BbmQY793/IMG-20240421-WA0008.webp" alt="مظلة سيارة فاخرة">
+                <img src="https://i.postimg.cc/BbmQY793/IMG-20240421-WA0008.webp" alt="مظلة سيارة فاخرة" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة فاخرة</figcaption>
             </figure>
             <!-- 2 - الصورة الثانية الجديدة -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/J0rzQVgL/مقاول-مظلات-في-الاحساء-14.webp" alt="مظلة مسبح عصرية">
+                <img src="https://i.postimg.cc/J0rzQVgL/مقاول-مظلات-في-الاحساء-14.webp" alt="مظلة مسبح عصرية" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسبح عصرية</figcaption>
             </figure>
-            <!-- 3 (كانت الأولى سابقاً) -->
+            <!-- 3 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/ydLgPCDS/5285107341525191501-120.jpg" alt="مظلة سيارة">
+                <img src="https://i.postimg.cc/ydLgPCDS/5285107341525191501-120.jpg" alt="مظلة سيارة 1" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة 1</figcaption>
             </figure>
             <!-- 4 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/W3Nqg11G/5285107341525191502-120.jpg" alt="مظلة سيارة">
+                <img src="https://i.postimg.cc/W3Nqg11G/5285107341525191502-120.jpg" alt="مظلة سيارة 2" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة 2</figcaption>
             </figure>
             <!-- 5 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/MT6fVppm/5285107341525191503-120.jpg" alt="مظلة سيارة">
+                <img src="https://i.postimg.cc/MT6fVppm/5285107341525191503-120.jpg" alt="مظلة سيارة 3" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة 3</figcaption>
             </figure>
             <!-- 6 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/TwtL9vK5/5285107341525191504-121.jpg" alt="مظلة سيارة">
+                <img src="https://i.postimg.cc/TwtL9vK5/5285107341525191504-121.jpg" alt="مظلة سيارة 4" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة 4</figcaption>
             </figure>
             <!-- 7 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/cHFgmGvw/5285107341525191505-121.jpg" alt="مظلة سيارة">
+                <img src="https://i.postimg.cc/cHFgmGvw/5285107341525191505-121.jpg" alt="مظلة سيارة 5" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة 5</figcaption>
             </figure>
             <!-- 8 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nzF9BhhK/5285107341525191506-121.jpg" alt="مظلة سيارة">
+                <img src="https://i.postimg.cc/nzF9BhhK/5285107341525191506-121.jpg" alt="مظلة سيارة 6" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارة 6</figcaption>
             </figure>
-            <!-- 9 (الرابط التالف تم تخطيه) -->
             <!-- 10 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/yd13c88Z/5289875884800150848-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/yd13c88Z/5289875884800150848-121.jpg" alt="مظلة مسابح 1" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 1</figcaption>
             </figure>
             <!-- 11 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/j5xnPSSw/5309895887007977391-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/j5xnPSSw/5309895887007977391-121.jpg" alt="مظلة مسابح 2" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 2</figcaption>
             </figure>
             <!-- 12 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/1tmVw33F/5309895887007977392-121.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/1tmVw33F/5309895887007977392-121.jpg" alt="مظلة حديقة 1" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 1</figcaption>
             </figure>
             <!-- 13 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rmVRxwwt/5309895887007977393-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/rmVRxwwt/5309895887007977393-121.jpg" alt="مظلة خارجية 1" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 1</figcaption>
             </figure>
             <!-- 14 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/hjDQTttf/5309895887007977394-121.jpg" alt="مظلة مداخل">
+                <img src="https://i.postimg.cc/hjDQTttf/5309895887007977394-121.jpg" alt="مظلة مداخل 1" draggable="false">
                 <figcaption class="gallery-caption">مظلة مداخل 1</figcaption>
             </figure>
             <!-- 15 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/26kLhSS1/5309895887007977406-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/26kLhSS1/5309895887007977406-121.jpg" alt="مظلة سيارات 7" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 7</figcaption>
             </figure>
             <!-- 16 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/504QL22H/5309895887007977407-119.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/504QL22H/5309895887007977407-119.jpg" alt="مظلة مسابح 3" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 3</figcaption>
             </figure>
             <!-- 17 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/cJM8vn0y/5348356309826342707-119.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/cJM8vn0y/5348356309826342707-119.jpg" alt="مظلة حدائق 2" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 2</figcaption>
             </figure>
             <!-- 18 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/qRJ6yvvg/5348356309826342708-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/qRJ6yvvg/5348356309826342708-121.jpg" alt="مظلة خارجية 2" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 2</figcaption>
             </figure>
             <!-- 19 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/RFSJKZZZ/5348356309826342709-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/RFSJKZZZ/5348356309826342709-121.jpg" alt="مظلة سيارات 8" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 8</figcaption>
             </figure>
             <!-- 20 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/k5Ft2bqP/5348356309826342710-119.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/k5Ft2bqP/5348356309826342710-119.jpg" alt="مظلة مسابح 4" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 4</figcaption>
             </figure>
             <!-- 21 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/PxXvY55q/5348356309826342711-121.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/PxXvY55q/5348356309826342711-121.jpg" alt="مظلة حديقة 2" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 2</figcaption>
             </figure>
             <!-- 22 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/xCfNM118/5348356309826342712-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/xCfNM118/5348356309826342712-121.jpg" alt="مظلة خارجية 3" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 3</figcaption>
             </figure>
             <!-- 23 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fLzSmRRL/5348356309826342714-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/fLzSmRRL/5348356309826342714-121.jpg" alt="مظلة سيارات 9" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 9</figcaption>
             </figure>
             <!-- 24 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/G2LTGmmc/5348356309826342715-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/G2LTGmmc/5348356309826342715-121.jpg" alt="مظلة مسابح 5" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 5</figcaption>
             </figure>
             <!-- 25 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/9MmwZQQm/5348356309826342717-121.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/9MmwZQQm/5348356309826342717-121.jpg" alt="مظلة حدائق 3" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 3</figcaption>
             </figure>
             <!-- 26 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/LsBZJ12p/5348356309826342718-119.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/LsBZJ12p/5348356309826342718-119.jpg" alt="مظلة خارجية 4" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 4</figcaption>
             </figure>
             <!-- 27 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Y9rLYCCw/5348356309826342720-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/Y9rLYCCw/5348356309826342720-121.jpg" alt="مظلة سيارات 10" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 10</figcaption>
             </figure>
             <!-- 28 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/9MmwZQQV/5348356309826342721-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/9MmwZQQV/5348356309826342721-121.jpg" alt="مظلة مسابح 6" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 6</figcaption>
             </figure>
             <!-- 29 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/W3Nqg11L/5348356309826342722-121.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/W3Nqg11L/5348356309826342722-121.jpg" alt="مظلة حديقة 3" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 3</figcaption>
             </figure>
             <!-- 30 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Bvc1jK4n/5348356309826342724-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/Bvc1jK4n/5348356309826342724-121.jpg" alt="مظلة خارجية 5" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 5</figcaption>
             </figure>
             <!-- 31 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/q7XCN34M/5348356309826342725-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/q7XCN34M/5348356309826342725-121.jpg" alt="مظلة سيارات 11" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 11</figcaption>
             </figure>
             <!-- 32 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/DzdbSXFH/5348356309826342727-119.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/DzdbSXFH/5348356309826342727-119.jpg" alt="مظلة مسابح 7" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 7</figcaption>
             </figure>
             <!-- 33 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/xdybXznS/5348356309826342728-121.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/xdybXznS/5348356309826342728-121.jpg" alt="مظلة حدائق 4" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 4</figcaption>
             </figure>
             <!-- 34 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/6QLG8vt6/5348356309826342729-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/6QLG8vt6/5348356309826342729-121.jpg" alt="مظلة خارجية 6" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 6</figcaption>
             </figure>
             <!-- 35 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/1zcN8qsx/5348356309826342730-119.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/1zcN8qsx/5348356309826342730-119.jpg" alt="مظلة سيارات 12" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 12</figcaption>
             </figure>
             <!-- 36 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/hGb7Xdcn/5348356309826342731-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/hGb7Xdcn/5348356309826342731-121.jpg" alt="مظلة مسابح 8" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 8</figcaption>
             </figure>
             <!-- 37 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fbj0V9Dw/5348356309826342732-121.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/fbj0V9Dw/5348356309826342732-121.jpg" alt="مظلة حديقة 4" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 4</figcaption>
             </figure>
             <!-- 38 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/8CBr76ND/5348356309826342733-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/8CBr76ND/5348356309826342733-121.jpg" alt="مظلة خارجية 7" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 7</figcaption>
             </figure>
             <!-- 39 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Xv0CN8M1/5361556363529621622-120.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/Xv0CN8M1/5361556363529621622-120.jpg" alt="مظلة سيارات 13" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 13</figcaption>
             </figure>
             <!-- 40 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YSwW23c8/5361556363529621624-120.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/YSwW23c8/5361556363529621624-120.jpg" alt="مظلة مسابح 9" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 9</figcaption>
             </figure>
             <!-- 41 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fbh9WK42/5361556363529621627-120.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/fbh9WK42/5361556363529621627-120.jpg" alt="مظلة حدائق 5" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 5</figcaption>
             </figure>
             <!-- 42 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/W4PkpnR8/5361556363529621632-120.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/W4PkpnR8/5361556363529621632-120.jpg" alt="مظلة خارجية 8" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 8</figcaption>
             </figure>
             <!-- 43 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/zf1gDjmj/5361556363529621633-120.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/zf1gDjmj/5361556363529621633-120.jpg" alt="مظلة سيارات 14" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 14</figcaption>
             </figure>
             <!-- 44 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/zf1gDjmF/5361556363529621635-120.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/zf1gDjmF/5361556363529621635-120.jpg" alt="مظلة مسابح 10" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 10</figcaption>
             </figure>
             <!-- 45 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/wBdmxVKh/5361556363529621636-120.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/wBdmxVKh/5361556363529621636-120.jpg" alt="مظلة حديقة 5" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 5</figcaption>
             </figure>
             <!-- 46 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nLtDVk8q/5361556363529621688-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/nLtDVk8q/5361556363529621688-121.jpg" alt="مظلة خارجية 9" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 9</figcaption>
             </figure>
             <!-- 47 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YSwW23cF/5361556363529621689-120.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/YSwW23cF/5361556363529621689-120.jpg" alt="مظلة سيارات 15" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 15</figcaption>
             </figure>
             <!-- 48 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/3wHvrBMj/5361556363529621690-120.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/3wHvrBMj/5361556363529621690-120.jpg" alt="مظلة مسابح 11" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 11</figcaption>
             </figure>
             <!-- 49 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rpLryJ6x/5361556363529621691-120.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/rpLryJ6x/5361556363529621691-120.jpg" alt="مظلة حدائق 6" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 6</figcaption>
             </figure>
             <!-- 50 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/43T945C1/5361556363529621692-120.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/43T945C1/5361556363529621692-120.jpg" alt="مظلة خارجية 10" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 10</figcaption>
             </figure>
             <!-- 51 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/tgHxR50V/5361556363529621693-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/tgHxR50V/5361556363529621693-121.jpg" alt="مظلة سيارات 16" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 16</figcaption>
             </figure>
             <!-- 52 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7Ly2PVvb/5361556363529621694-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/7Ly2PVvb/5361556363529621694-121.jpg" alt="مظلة مسابح 12" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 12</figcaption>
             </figure>
             <!-- 53 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Pqkwf4Gx/5361556363529621695-121.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/Pqkwf4Gx/5361556363529621695-121.jpg" alt="مظلة حديقة 6" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 6</figcaption>
             </figure>
             <!-- 54 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7Ly2PVvf/5361556363529621696-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/7Ly2PVvf/5361556363529621696-121.jpg" alt="مظلة خارجية 11" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 11</figcaption>
             </figure>
             <!-- 55 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BvGKZgWv/5361556363529621697-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/BvGKZgWv/5361556363529621697-121.jpg" alt="مظلة سيارات 17" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 17</figcaption>
             </figure>
             <!-- 56 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Cx88V22f/5361556363529621698-120.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/Cx88V22f/5361556363529621698-120.jpg" alt="مظلة مسابح 13" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 13</figcaption>
             </figure>
             <!-- 57 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/x1mmSZZY/5361556363529621699-120.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/x1mmSZZY/5361556363529621699-120.jpg" alt="مظلة حدائق 7" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 7</figcaption>
             </figure>
             <!-- 58 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/9Q99jkkj/5361556363529621700-120.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/9Q99jkkj/5361556363529621700-120.jpg" alt="مظلة خارجية 12" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 12</figcaption>
             </figure>
             <!-- 59 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YCFFwPP7/5361556363529621701-121.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/YCFFwPP7/5361556363529621701-121.jpg" alt="مظلة سيارات 18" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 18</figcaption>
             </figure>
             <!-- 60 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/kgSSdHHJ/5361556363529621705-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/kgSSdHHJ/5361556363529621705-121.jpg" alt="مظلة مسابح 14" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 14</figcaption>
             </figure>
             <!-- 61 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/y8RRzGGc/5361556363529621706-121.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/y8RRzGGc/5361556363529621706-121.jpg" alt="مظلة حديقة 7" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 7</figcaption>
             </figure>
             <!-- 62 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/vZnndKK8/5361556363529621707-119.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/vZnndKK8/5361556363529621707-119.jpg" alt="مظلة خارجية 13" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 13</figcaption>
             </figure>
             <!-- 63 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/W1ZZPyyk/5361556363529621708-119.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/W1ZZPyyk/5361556363529621708-119.jpg" alt="مظلة سيارات 19" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 19</figcaption>
             </figure>
             <!-- 64 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Cx88V22L/5361556363529621714-119.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/Cx88V22L/5361556363529621714-119.jpg" alt="مظلة مسابح 15" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 15</figcaption>
             </figure>
             <!-- 65 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/mg99Gnn1/5361556363529621715-119.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/mg99Gnn1/5361556363529621715-119.jpg" alt="مظلة حدائق 8" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 8</figcaption>
             </figure>
             <!-- 66 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Cx88V22p/5361556363529621716-119.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/Cx88V22p/5361556363529621716-119.jpg" alt="مظلة خارجية 14" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 14</figcaption>
             </figure>
             <!-- 67 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/3xGGHqqx/5361556363529621717-119.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/3xGGHqqx/5361556363529621717-119.jpg" alt="مظلة سيارات 20" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 20</figcaption>
             </figure>
             <!-- 68 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/DzdbSXFg/IMG-20251225-WA0016.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/DzdbSXFg/IMG-20251225-WA0016.jpg" alt="مظلة مسابح 16" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 16</figcaption>
             </figure>
             <!-- 69 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YSfmvWkx/IMG-20251225-WA0018.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/YSfmvWkx/IMG-20251225-WA0018.jpg" alt="مظلة حديقة 8" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 8</figcaption>
             </figure>
             <!-- 70 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/N07rKHYn/IMG-20251225-WA0019.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/N07rKHYn/IMG-20251225-WA0019.jpg" alt="مظلة خارجية 15" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 15</figcaption>
             </figure>
             <!-- 71 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/DzKXfgVN/IMG-20251225-WA0020.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/DzKXfgVN/IMG-20251225-WA0020.jpg" alt="مظلة سيارات 21" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 21</figcaption>
             </figure>
             <!-- 72 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/mrGHZwxq/IMG-20251225-WA0021.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/mrGHZwxq/IMG-20251225-WA0021.jpg" alt="مظلة مسابح 17" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 17</figcaption>
             </figure>
             <!-- 73 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/qvKKdF5P/IMG-20260116-WA0001.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/qvKKdF5P/IMG-20260116-WA0001.jpg" alt="مظلة حدائق 9" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 9</figcaption>
             </figure>
             <!-- 74 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/htmmqY56/IMG-20260116-WA0008.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/htmmqY56/IMG-20260116-WA0008.jpg" alt="مظلة خارجية 16" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 16</figcaption>
             </figure>
             <!-- 75 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/sgWWRLNb/IMG-20260116-WA0009.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/sgWWRLNb/IMG-20260116-WA0009.jpg" alt="مظلة سيارات 22" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 22</figcaption>
             </figure>
             <!-- 76 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/VLptpwKz/IMG-20260116-WA0010.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/VLptpwKz/IMG-20260116-WA0010.jpg" alt="مظلة مسابح 18" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 18</figcaption>
             </figure>
             <!-- 77 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/vHknky0s/IMG-20260116-WA0011.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/vHknky0s/IMG-20260116-WA0011.jpg" alt="مظلة حديقة 9" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 9</figcaption>
             </figure>
             <!-- 78 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NfSXStdB/IMG-20260116-WA0012.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/NfSXStdB/IMG-20260116-WA0012.jpg" alt="مظلة خارجية 17" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 17</figcaption>
             </figure>
             <!-- 79 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Fs8S8vT5/IMG-20260118-WA0028.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/Fs8S8vT5/IMG-20260118-WA0028.jpg" alt="مظلة سيارات 23" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 23</figcaption>
             </figure>
             <!-- 80 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/WbCZCV5P/IMG-20260118-WA0029.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/WbCZCV5P/IMG-20260118-WA0029.jpg" alt="مظلة مسابح 19" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 19</figcaption>
             </figure>
             <!-- 81 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Pr9D9HSG/IMG-20260118-WA0030.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/Pr9D9HSG/IMG-20260118-WA0030.jpg" alt="مظلة حدائق 10" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 10</figcaption>
             </figure>
             <!-- 82 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/wTZNZz0n/IMG-20260118-WA0031.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/wTZNZz0n/IMG-20260118-WA0031.jpg" alt="مظلة خارجية 18" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 18</figcaption>
             </figure>
             <!-- 83 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/9FK9K2Jv/IMG-20260118-WA0032.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/9FK9K2Jv/IMG-20260118-WA0032.jpg" alt="مظلة سيارات 24" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 24</figcaption>
             </figure>
             <!-- 84 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/vHknky3S/IMG-20260118-WA0033.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/vHknky3S/IMG-20260118-WA0033.jpg" alt="مظلة مسابح 20" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 20</figcaption>
             </figure>
             <!-- 85 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fTpdpsBB/IMG-20260118-WA0034.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/fTpdpsBB/IMG-20260118-WA0034.jpg" alt="مظلة حديقة 10" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 10</figcaption>
             </figure>
             <!-- 86 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/yYk9LxXL/IMG-20260123-WA0000-edit-1256497096543234.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/yYk9LxXL/IMG-20260123-WA0000-edit-1256497096543234.jpg" alt="مظلة خارجية 19" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 19</figcaption>
             </figure>
             <!-- 87 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/hPfx2vbp/IMG-20260123-WA0001-edit-1256466167721527.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/hPfx2vbp/IMG-20260123-WA0001-edit-1256466167721527.jpg" alt="مظلة سيارات 25" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 25</figcaption>
             </figure>
             <!-- 88 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/BQkFk3MH/m1jpg.jpg" alt="مظلة مسابح 21" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 21</figcaption>
             </figure>
             <!-- 89 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rF343TQj/m3.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/rF343TQj/m3.jpg" alt="مظلة حدائق 11" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 11</figcaption>
             </figure>
             <!-- 90 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YqZFZ7bN/m4.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/YqZFZ7bN/m4.jpg" alt="مظلة خارجية 20" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 20</figcaption>
             </figure>
             <!-- 91 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/L6wPwSNV/m5.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/L6wPwSNV/m5.jpg" alt="مظلة سيارات 26" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 26</figcaption>
             </figure>
             <!-- 92 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/zX6h6N0j/m6.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/zX6h6N0j/m6.jpg" alt="مظلة مسابح 22" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 22</figcaption>
             </figure>
             <!-- 93 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YqZFZ7bQ/m7.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/YqZFZ7bQ/m7.jpg" alt="مظلة حديقة 11" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 11</figcaption>
             </figure>
             <!-- 94 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/02FSFvct/m8.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/02FSFvct/m8.jpg" alt="مظلة خارجية 21" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 21</figcaption>
             </figure>
             <!-- 95 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/28MWMY20/m9.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/28MWMY20/m9.jpg" alt="مظلة سيارات 27" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 27</figcaption>
             </figure>
             <!-- 96 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/52pX1M3N/5449855625505475748-120-edit-1250923116492131.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/52pX1M3N/5449855625505475748-120-edit-1250923116492131.jpg" alt="مظلة مسابح 23" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 23</figcaption>
             </figure>
             <!-- 97 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/jSvDKrXq/5449855625505475749-120.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/jSvDKrXq/5449855625505475749-120.jpg" alt="مظلة حدائق 12" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 12</figcaption>
             </figure>
             <!-- 98 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Hk3rHC2d/5449855625505475792-119-edit-1250883065537928.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/Hk3rHC2d/5449855625505475792-119-edit-1250883065537928.jpg" alt="مظلة خارجية 22" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 22</figcaption>
             </figure>
             <!-- 99 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Dw5SFKgv/5449855625505475793-119.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/Dw5SFKgv/5449855625505475793-119.jpg" alt="مظلة سيارات 28" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 28</figcaption>
             </figure>
             <!-- 100 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/XYnrTv9R/5449855625505475793-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/XYnrTv9R/5449855625505475793-121.jpg" alt="مظلة مسابح 24" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 24</figcaption>
             </figure>
             <!-- 101 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/kg72k5WL/5449855625505475794-119.jpg" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/kg72k5WL/5449855625505475794-119.jpg" alt="مظلة حديقة 12" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 12</figcaption>
             </figure>
             <!-- 102 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rwgDcL9v/5449855625505475794-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/rwgDcL9v/5449855625505475794-121.jpg" alt="مظلة خارجية 23" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 23</figcaption>
             </figure>
             <!-- 103 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/YC8vkwxX/5449855625505475795-119.jpg" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/YC8vkwxX/5449855625505475795-119.jpg" alt="مظلة سيارات 29" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 29</figcaption>
             </figure>
             <!-- 104 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/FHGYmQZt/5449855625505475795-121.jpg" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/FHGYmQZt/5449855625505475795-121.jpg" alt="مظلة مسابح 25" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 25</figcaption>
             </figure>
             <!-- 105 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/0yZzxqCV/5449855625505475796-119.jpg" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/0yZzxqCV/5449855625505475796-119.jpg" alt="مظلة حدائق 13" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 13</figcaption>
             </figure>
             <!-- 106 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/0yZzxqCX/5449855625505475796-121.jpg" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/0yZzxqCX/5449855625505475796-121.jpg" alt="مظلة خارجية 24" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 24</figcaption>
             </figure>
             <!-- 107 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BbmQY792/0157.webp" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/BbmQY792/0157.webp" alt="مظلة سيارات 30" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 30</figcaption>
             </figure>
             <!-- 108 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/y6jd8xJp/0159.webp" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/y6jd8xJp/0159.webp" alt="مظلة مسابح 26" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 26</figcaption>
             </figure>
             <!-- 109 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nV2zhrsR/0164.webp" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/nV2zhrsR/0164.webp" alt="مظلة حديقة 13" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 13</figcaption>
             </figure>
             <!-- 110 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/qq1MbDV8/0196.webp" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/qq1MbDV8/0196.webp" alt="مظلة خارجية 25" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 25</figcaption>
             </figure>
             <!-- 111 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/FzTsWC5y/0202.webp" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/FzTsWC5y/0202.webp" alt="مظلة سيارات 31" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 31</figcaption>
             </figure>
             <!-- 112 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/sxTD6Hd9/0206.webp" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/sxTD6Hd9/0206.webp" alt="مظلة مسابح 27" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 27</figcaption>
             </figure>
             <!-- 113 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/6qM5jbJp/305559a349b80630360493f58267d3c2.webp" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/6qM5jbJp/305559a349b80630360493f58267d3c2.webp" alt="مظلة حدائق 14" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 14</figcaption>
             </figure>
             <!-- 114 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/ZnwK7stR/5cde57066796971573080118cb986df5.webp" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/ZnwK7stR/5cde57066796971573080118cb986df5.webp" alt="مظلة خارجية 26" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 26</figcaption>
             </figure>
             <!-- 115 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/VvKLGZQL/e9f709bb6b47bc6fd8c6b679e7a67791-1.webp" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/VvKLGZQL/e9f709bb6b47bc6fd8c6b679e7a67791-1.webp" alt="مظلة سيارات 32" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 32</figcaption>
             </figure>
             <!-- 116 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/SRgNT1Fm/IMG-20240421-WA0000.webp" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/SRgNT1Fm/IMG-20240421-WA0000.webp" alt="مظلة مسابح 28" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 28</figcaption>
             </figure>
             <!-- 117 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/SRgNT1FS/IMG-20240421-WA0005.webp" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/SRgNT1FS/IMG-20240421-WA0005.webp" alt="مظلة حديقة 14" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 14</figcaption>
             </figure>
             <!-- 118 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BbmQY793/IMG-20240421-WA0008.webp" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/BbmQY793/IMG-20240421-WA0008.webp" alt="مظلة خارجية 27" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 27</figcaption>
             </figure>
             <!-- 119 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/90mQB5SQ/IMG-20240421-WA0015.webp" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/90mQB5SQ/IMG-20240421-WA0015.webp" alt="مظلة سيارات 33" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 33</figcaption>
             </figure>
             <!-- 120 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/prsXGcbM/IMG-20240421-WA0016.webp" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/prsXGcbM/IMG-20240421-WA0016.webp" alt="مظلة مسابح 29" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 29</figcaption>
             </figure>
             <!-- 121 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/zvxXt2Zm/IMG-20240421-WA0017.webp" alt="مظلة حدائق">
+                <img src="https://i.postimg.cc/zvxXt2Zm/IMG-20240421-WA0017.webp" alt="مظلة حدائق 15" draggable="false">
                 <figcaption class="gallery-caption">مظلة حدائق 15</figcaption>
             </figure>
             <!-- 122 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fyzRvnFM/mzlat-alahsaʾ-1.webp" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/fyzRvnFM/mzlat-alahsaʾ-1.webp" alt="مظلة خارجية 28" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 28</figcaption>
             </figure>
             <!-- 123 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nr3cRSbt/mzlat-alahsaʾ-1-1.webp" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/nr3cRSbt/mzlat-alahsaʾ-1-1.webp" alt="مظلة سيارات 34" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 34</figcaption>
             </figure>
             <!-- 124 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/GtXh7gw3/mzlat-alahsaʾ-10.webp" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/GtXh7gw3/mzlat-alahsaʾ-10.webp" alt="مظلة مسابح 30" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 30</figcaption>
             </figure>
             <!-- 125 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/gjgkStFm/mzlat-alahsaʾ-8.webp" alt="مظلة حديقة">
+                <img src="https://i.postimg.cc/gjgkStFm/mzlat-alahsaʾ-8.webp" alt="مظلة حديقة 15" draggable="false">
                 <figcaption class="gallery-caption">مظلة حديقة 15</figcaption>
             </figure>
             <!-- 126 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/d3sV9PXv/mqawl-mzlat-fy-alahsaʾ-11.webp" alt="مظلة خارجية">
+                <img src="https://i.postimg.cc/d3sV9PXv/mqawl-mzlat-fy-alahsaʾ-11.webp" alt="مظلة خارجية 29" draggable="false">
                 <figcaption class="gallery-caption">مظلة خارجية 29</figcaption>
             </figure>
             <!-- 127 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/J0rzQVgL/mqawl-mzlat-fy-alahsaʾ-14.webp" alt="مظلة سيارات">
+                <img src="https://i.postimg.cc/J0rzQVgL/mqawl-mzlat-fy-alahsaʾ-14.webp" alt="مظلة سيارات 35" draggable="false">
                 <figcaption class="gallery-caption">مظلة سيارات 35</figcaption>
             </figure>
             <!-- 128 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/kGJgy3Zq/mqawl-mzlat-fy-alahsaʾ-15.webp" alt="مظلة مسابح">
+                <img src="https://i.postimg.cc/kGJgy3Zq/mqawl-mzlat-fy-alahsaʾ-15.webp" alt="مظلة مسابح 31" draggable="false">
                 <figcaption class="gallery-caption">مظلة مسابح 31</figcaption>
             </figure>
         </div>
@@ -1024,6 +1129,31 @@
             </ul>
         </div>
 
+        <!-- قسم روابط جميع خدمات الموقع -->
+        <div class="services-links">
+            <h2>خدماتنا الأخرى</h2>
+            <div class="links-grid">
+                <a href="https://almizalaat5-max.github.io/almi/">الرئيسية</a>
+                <a href="https://almizalaat5-max.github.io/almi/khayam.html">خيام ملكية</a>
+                <a href="https://almizalaat5-max.github.io/almi/brjulat.html">برجولات خشبية</a>
+                <a href="https://almizalaat5-max.github.io/almi/sawatir.html">سواتر</a>
+                <a href="https://almizalaat5-max.github.io/almi/tansiq-hadayeq.html">تنسيق حدائق</a>
+                <a href="https://almizalaat5-max.github.io/almi/decorat.html">ديكورات داخلية وخارجية</a>
+                <a href="https://almizalaat5-max.github.io/almi/mazallat.html">مظلات سيارات ومسابح</a>
+                <a href="https://almizalaat5-max.github.io/almi/qarmid.html">قرميد</a>
+                <a href="https://almizalaat5-max.github.io/almi/hanajit.html">هناجر ومستودعات وغرف سندويش بنل</a>
+            </div>
+        </div>
+
+        <!-- قسم المحتوى الثري (SEO) -->
+        <div class="seo-content">
+            <h2>أفضل مظلات سيارات ومسابح في الأحساء</h2>
+            <p>تُعد <strong>مظلات السيارات والمسابح</strong> من العناصر الأساسية لحماية المركبات والمسابح من العوامل الجوية القاسية في الأحساء من حرارة شديدة وغبار وأمطار. في <strong>رواد المظلات</strong>، نقدم لكم تشكيلة واسعة من <strong>أفضل المظلات</strong> التي تجمع بين المتانة والجمال والكفاءة العالية. سواء كنتم تبحثون عن <strong>مظلات سيارات حديثة</strong> أو <strong>مظلات مسابح عصرية</strong> أو <strong>مظلات متحركة للحدائق</strong>، فإن فريقنا من المهندسين والفنيين المتخصصين يضمن لكم تنفيذ أرقى التصاميم بدقة عالية وفي وقت قياسي.</p>
+            <p>نحن نستخدم <strong>أجود أنواع الخامات</strong> في تصنيع المظلات مثل <strong>الحديد المجلفن</strong>، <strong>الأخشاب الطبيعية المعالجة</strong>، <strong>أقمشة PVC العازلة</strong>، و<strong>البولي كربونيت الشفاف</strong>. جميع موادنا مقاومة للعوامل الجوية وتوفر عزلاً ممتازاً للحرارة والأمطار والغبار، مما يضمن عمراً افتراضياً طويلاً للمظلة وحماية مثالية للسيارات أو المسابح. كما نحرص على استخدام أحدث تقنيات <strong>الأنظمة الكهربائية للمظلات المتحركة</strong> لتوفير الراحة والسهولة في الاستخدام.</p>
+            <p>لا تقتصر خدماتنا على <strong>تصميم وتنفيذ المظلات</strong> فحسب، بل نمتد لتشمل <strong>تركيب المظلات</strong> في جميع مدن وقرى الأحساء (الهفوف، المبرز، العيون، الجفر، بقيق، وغيرها) بأسرع وقت وبأعلى جودة. نقدم لكم <strong>أسعاراً تنافسية</strong> تناسب جميع الفئات مع <strong>ضمان على المواد والتنفيذ</strong>. كما نوفر لكم إمكانية <strong>تصميم مظلات حسب الطلب</strong> لتناسب المساحات المختلفة وذوقكم الخاص.</p>
+            <p>سواء كنتم بحاجة إلى <strong>مظلة سيارة كهربائية لمدخل الفيلا</strong>، أو <strong>مظلة مسبح ثابتة</strong>، أو <strong>مظلات حدائق متحركة</strong>، أو حتى <strong>مظلات للمدارس والمساجد</strong>، فإننا نوفر لكم حلولاً مبتكرة تجمع بين الجمال والوظيفة. كما نقدم خدمات <strong>صيانة وترميم المظلات</strong> وإعادة تأهيلها بأحدث الأساليب. تواصلوا معنا الآن لتحصلوا على <strong>أفضل مظلات السيارات والمسابح في الأحساء</strong> بأسعار لا تقبل المنافسة.</p>
+        </div>
+
         <!-- زر الاتصال -->
         <div class="contact-section">
             <a href="https://wa.me/966567045945" class="contact-btn" target="_blank">
@@ -1032,23 +1162,33 @@
         </div>
     </main>
 
-    <!-- التذييل -->
+    <!-- التذييل مع اسم المصمم -->
     <footer>
         <div class="container">
             <p>© 2026 رواد المظلات في الأحساء - جميع الحقوق محفوظة</p>
+            <div class="designer-credit">
+                تصميم <a href="#" target="_blank">سليمان الحكمي</a> 0551987351
+            </div>
         </div>
     </footer>
 
-    <!-- كود JavaScript للتحكم في الترويسة -->
+    <!-- كود JavaScript لحماية الصور -->
     <script>
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('mainHeader');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        // منع النقر بزر الماوس الأيمن على الصور فقط
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                return false;
+            });
+        });
+
+        // منع اختصارات لوحة المفاتيح لنسخ الصور
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 's' || e.key === 'p')) {
+                e.preventDefault();
+                return false;
             }
         });
     </script>
 </body>
-  </html>
+    </html>
