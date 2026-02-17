@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>سواتر - رواد المظلات الأحساء</title>
     <!-- تحسين محركات البحث -->
-    <meta name="description" content="أفضل وأجود أنواع السواتر في الأحساء. سواتر خشب، حديد، قماش للمجالس والحدائق والمسابح. حلول عملية وأنيقة للخصوصية والأمان.">
+    <meta name="description" content="أفضل وأجود أنواع السواتر في الأحساء. سواتر خشب، حديد، قماش للمجالس والحدائق والمسابح. حلول عملية وأنيقة للخصوصية والأمان. أكثر من 60 تصميم ساتر فاخر.">
+    <!-- كلمات مفتاحية إضافية لتحسين SEO -->
+    <meta name="keywords" content="سواتر, سواتر خشبية, سواتر حديد, سواتر قماش, سواتر الأحساء, سواتر حدائق, سواتر مجالس, سواتر مسابح, سواتر خصوصية, سواتر أمان, تركيب سواتر, مقاول سواتر, شركة سواتر, سواتر خشب طبيعي, سواتر حديد مودرن, سواتر قماش متحركة, سواتر للمنازل, سواتر للفلل, سواتر للقصور, سواتر للاستراحات, سواتر للشاليهات, سواتر للمطاعم, سواتر للمقاهي, سواتر للفنادق, سواتر للمدارس, سواتر للمستشفيات, سواتر للشركات, سواتر للمصانع, سواتر للمزارع, سواتر للهناجر, سواتر للمستودعات, سواتر للمداخل, سواتر للمشايات, سواتر للممرات, سواتر للحدائق المنزلية, سواتر للمجالس الخارجية, سواتر للمسابح الخاصة, سواتر للمسابح العامة, سواتر خشب معالج, سواتر حديد مجلفن, سواتر قماش pvc, سواتر مقاومة للعوامل الجوية, سواتر مقاومة للحرارة, سواتر مقاومة للأمطار, سواتر مقاومة للغبار, سواتر مقاومة للرياح, سواتر عازلة للخصوصية, سواتر عازلة للصوت, سواتر عازلة للغبار, سواتر بتصاميم عصرية, سواتر بتصاميم كلاسيكية, سواتر بتصاميم تراثية, سواتر حسب الطلب, سواتر جاهزة, سواتر متحركة, سواتر ثابتة, سواتر مع أبواب, سواتر مع بوابات, سواتر مع إضاءة, سواتر مع زخارف, سواتر مع نقوش, سواتر مع أعمدة, سواتر مع قواعد, سواتر مع أسوار, سواتر مع جدران, سواتر مع أسطح, سواتر مع مظلات, سواتر مع برجولات, سواتر مع مشايات, سواتر مع ممرات, سواتر مع حدائق, سواتر مع مسابح, سواتر مع جلسات, سواتر مع مداخل, سواتر مع مواقف, سواتر مع كراجات, سواتر مع ورش, سواتر مع مخازن, سواتر مع غرف, سواتر مع استراحات, سواتر مع شاليهات, سواتر مع فلل, سواتر مع قصور">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- خط أميري -->
@@ -34,10 +36,21 @@
             --saudi-green: #006C35;
             --shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
+        /* حماية الصور */
         img {
             max-width: 100%;
             height: auto;
             display: block;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none;
         }
         a {
             text-decoration: none;
@@ -54,44 +67,18 @@
                 padding: 0 20px;
             }
         }
-        /* الرأس المتحرك */
+        /* الرأس - غير مثبت */
         .site-header {
             background-color: var(--saudi-green);
             padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
             width: 100%;
-            transition: all 0.3s ease;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .site-header.scrolled {
-            background-color: #004d28;
-            padding: 5px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .site-header.scrolled .logo img {
-            height: 35px;
-        }
-        .site-header.scrolled .logo-text h1 {
-            font-size: 1rem;
-        }
-        .site-header.scrolled .logo-text span {
-            font-size: 0.65rem;
-        }
-        .site-header.scrolled .social-header a {
-            font-size: 1rem;
-        }
-        .site-header.scrolled .phone-number {
-            padding: 3px 8px;
-            font-size: 0.75rem;
         }
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 8px;
-            transition: 0.3s;
         }
         @media (min-width: 600px) {
             .header-content {
@@ -108,21 +95,18 @@
             height: 45px;
             width: auto;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-            transition: 0.3s;
         }
         .logo-text h1 {
             font-size: 1.2rem;
             color: white;
             font-weight: 600;
             line-height: 1.2;
-            transition: 0.3s;
         }
         .logo-text span {
             font-size: 0.75rem;
             color: white;
             opacity: 0.9;
             display: block;
-            transition: 0.3s;
         }
         .social-header {
             display: flex;
@@ -150,7 +134,6 @@
             padding: 5px 10px;
             border-radius: 30px;
             font-size: 0.85rem;
-            transition: 0.3s;
             white-space: nowrap;
         }
         .phone-number i {
@@ -177,7 +160,7 @@
             .page-title h1 { font-size: 2.5rem; }
             .page-title p { font-size: 1.2rem; }
         }
-        /* معرض الصور */
+        /* معرض الصور مع طبقة حماية */
         .gallery {
             display: grid;
             grid-template-columns: 1fr;
@@ -207,16 +190,31 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: 0.3s;
+            position: relative;
         }
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        /* طبقة شفافة فوق الصورة */
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
+            pointer-events: none;
         }
         .gallery-item img {
             width: 100%;
             aspect-ratio: 4/3;
             object-fit: cover;
             display: block;
+            position: relative;
+            z-index: 1;
         }
         .gallery-caption {
             padding: 10px;
@@ -226,6 +224,8 @@
             color: var(--accent-brown);
             font-weight: 500;
             text-align: center;
+            position: relative;
+            z-index: 3;
         }
         @media (min-width: 768px) {
             .gallery-caption {
@@ -286,6 +286,90 @@
             border-right: 3px solid var(--primary-beige);
             box-shadow: var(--shadow);
         }
+        /* قسم روابط الخدمات */
+        .services-links {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--primary-beige);
+        }
+        .services-links h2 {
+            font-size: 1.8rem;
+            color: var(--saudi-green);
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+            text-align: center;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .links-grid a {
+            display: block;
+            background: var(--light-beige);
+            color: var(--accent-brown);
+            padding: 12px 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+        .links-grid a:hover {
+            background: var(--saudi-green);
+            color: white;
+            border-color: var(--primary-beige);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,108,53,0.2);
+        }
+        @media (min-width: 768px) {
+            .links-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            .links-grid a {
+                padding: 15px;
+                font-size: 1.1rem;
+            }
+        }
+        /* قسم المحتوى الثري */
+        .seo-content {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--primary-beige);
+        }
+        .seo-content h2 {
+            font-size: 1.8rem;
+            color: var(--saudi-green);
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+            text-align: center;
+        }
+        .seo-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: justify;
+        }
+        .seo-content strong {
+            color: var(--accent-brown);
+        }
+        @media (min-width: 768px) {
+            .seo-content {
+                padding: 40px;
+            }
+            .seo-content p {
+                font-size: 1.1rem;
+            }
+        }
         /* زر الاتصال */
         .contact-section {
             text-align: center;
@@ -318,21 +402,36 @@
                 width: auto;
             }
         }
-        /* التذييل */
+        /* التذييل مع اسم المصمم */
         footer {
             background: var(--dark-beige);
             color: white;
-            padding: 25px 0;
+            padding: 25px 0 15px;
             text-align: center;
             margin-top: 50px;
         }
         footer p {
             font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        .designer-credit {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+        }
+        .designer-credit a {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .designer-credit a:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
-    <!-- الرأس المتحرك -->
+    <!-- الرأس (غير مثبت) -->
     <header class="site-header" id="mainHeader">
         <div class="container header-content">
             <div class="logo">
@@ -365,298 +464,296 @@
             <p>حلول عملية وأنيقة للخصوصية والأمان للمساحات الخارجية في الأحساء</p>
         </div>
 
-        <!-- معرض الصور (جميع الروابط التي تعمل) -->
+        <!-- معرض الصور مع حماية -->
         <div class="gallery">
             <!-- 1 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/vTdPy9YV/5296776303811955477-120.jpg" alt="ساتر خشبي حديث">
+                <img src="https://i.postimg.cc/vTdPy9YV/5296776303811955477-120.jpg" alt="ساتر خشبي حديث" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشبي حديث</figcaption>
             </figure>
             <!-- 2 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/QCr6D58Q/5296776303811955478-120.jpg" alt="ساتر حديدي للمجالس">
+                <img src="https://i.postimg.cc/QCr6D58Q/5296776303811955478-120.jpg" alt="ساتر حديدي للمجالس" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديدي للمجالس</figcaption>
             </figure>
             <!-- 3 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/d3KWFds8/5296776303811955480-121.jpg" alt="ساتر قماش للخصوصية">
+                <img src="https://i.postimg.cc/d3KWFds8/5296776303811955480-121.jpg" alt="ساتر قماش للخصوصية" draggable="false">
                 <figcaption class="gallery-caption">ساتر قماش للخصوصية</figcaption>
             </figure>
             <!-- 4 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/vTdPy9Y5/5296776303811955481-120.jpg" alt="ساتر حدائق خشبي">
+                <img src="https://i.postimg.cc/vTdPy9Y5/5296776303811955481-120.jpg" alt="ساتر حدائق خشبي" draggable="false">
                 <figcaption class="gallery-caption">ساتر حدائق خشبي</figcaption>
             </figure>
             <!-- 5 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Kjy9bLGL/5296776303811955482-121.jpg" alt="ساتر مع بوابة">
+                <img src="https://i.postimg.cc/Kjy9bLGL/5296776303811955482-121.jpg" alt="ساتر مع بوابة" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع بوابة</figcaption>
             </figure>
             <!-- 6 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/cCNDWYxw/5296776303811955483-121.jpg" alt="ساتر خشب مع تصميم">
+                <img src="https://i.postimg.cc/cCNDWYxw/5296776303811955483-121.jpg" alt="ساتر خشب مع تصميم" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب مع تصميم</figcaption>
             </figure>
-            <!-- 7 (الرابط التالف تم تخطيه) -->
             <!-- 8 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/wMdWzJqR/5296776303811955485-121.jpg" alt="ساتر حديد مودرن">
+                <img src="https://i.postimg.cc/wMdWzJqR/5296776303811955485-121.jpg" alt="ساتر حديد مودرن" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد مودرن</figcaption>
             </figure>
             <!-- 9 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/wMdWzJq3/5296776303811955486-119.jpg" alt="ساتر مع زخارف">
+                <img src="https://i.postimg.cc/wMdWzJq3/5296776303811955486-119.jpg" alt="ساتر مع زخارف" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع زخارف</figcaption>
             </figure>
             <!-- 10 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nrtdx7Fs/5296776303811955487-121.jpg" alt="ساتر خشب طبيعي">
+                <img src="https://i.postimg.cc/nrtdx7Fs/5296776303811955487-121.jpg" alt="ساتر خشب طبيعي" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب طبيعي</figcaption>
             </figure>
             <!-- 11 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/d3KWFds3/5296776303811955489-121.jpg" alt="ساتر حديد مع نقوش">
+                <img src="https://i.postimg.cc/d3KWFds3/5296776303811955489-121.jpg" alt="ساتر حديد مع نقوش" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد مع نقوش</figcaption>
             </figure>
             <!-- 12 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/J0WT8Jrn/5296776303811955490-121.jpg" alt="ساتر للمسابح">
+                <img src="https://i.postimg.cc/J0WT8Jrn/5296776303811955490-121.jpg" alt="ساتر للمسابح" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمسابح</figcaption>
             </figure>
             <!-- 13 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/RhzPmfSN/5296776303811955491-121.jpg" alt="ساتر خشب فاخر">
+                <img src="https://i.postimg.cc/RhzPmfSN/5296776303811955491-121.jpg" alt="ساتر خشب فاخر" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب فاخر</figcaption>
             </figure>
             <!-- 14 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/PJk6HZXT/5296776303811955496-120.jpg" alt="ساتر حديد بسيط">
+                <img src="https://i.postimg.cc/PJk6HZXT/5296776303811955496-120.jpg" alt="ساتر حديد بسيط" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد بسيط</figcaption>
             </figure>
             <!-- 15 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Y0wX7grq/5296776303811955497-120.jpg" alt="ساتر مع أعمدة">
+                <img src="https://i.postimg.cc/Y0wX7grq/5296776303811955497-120.jpg" alt="ساتر مع أعمدة" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع أعمدة</figcaption>
             </figure>
             <!-- 16 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/mkGd4MLr/5296776303811955498-120.jpg" alt="ساتر للمداخل">
+                <img src="https://i.postimg.cc/mkGd4MLr/5296776303811955498-120.jpg" alt="ساتر للمداخل" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمداخل</figcaption>
             </figure>
             <!-- 17 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/90jx2Tmc/5348356309826342713-121.jpg" alt="ساتر خشب مع إضاءة">
+                <img src="https://i.postimg.cc/90jx2Tmc/5348356309826342713-121.jpg" alt="ساتر خشب مع إضاءة" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب مع إضاءة</figcaption>
             </figure>
             <!-- 18 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/50zPDpVt/IMG-20260116-WA0013.jpg" alt="ساتر حدائق منزلي">
+                <img src="https://i.postimg.cc/50zPDpVt/IMG-20260116-WA0013.jpg" alt="ساتر حدائق منزلي" draggable="false">
                 <figcaption class="gallery-caption">ساتر حدائق منزلي</figcaption>
             </figure>
             <!-- 19 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/4yT8GtfG/IMG-20260116-WA0014.jpg" alt="ساتر خارجي">
+                <img src="https://i.postimg.cc/4yT8GtfG/IMG-20260116-WA0014.jpg" alt="ساتر خارجي" draggable="false">
                 <figcaption class="gallery-caption">ساتر خارجي</figcaption>
             </figure>
             <!-- 20 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/TwbkBQ6T/IMG-20260118-WA0006.jpg" alt="ساتر خشب طويل">
+                <img src="https://i.postimg.cc/TwbkBQ6T/IMG-20260118-WA0006.jpg" alt="ساتر خشب طويل" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب طويل</figcaption>
             </figure>
             <!-- 21 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fLdH15NT/IMG-20260118-WA0007.jpg" alt="ساتر حديد خارجي">
+                <img src="https://i.postimg.cc/fLdH15NT/IMG-20260118-WA0007.jpg" alt="ساتر حديد خارجي" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد خارجي</figcaption>
             </figure>
             <!-- 22 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/xCmsBg2f/IMG-20260118-WA0008.jpg" alt="ساتر مع نباتات">
+                <img src="https://i.postimg.cc/xCmsBg2f/IMG-20260118-WA0008.jpg" alt="ساتر مع نباتات" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع نباتات</figcaption>
             </figure>
             <!-- 23 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/JnXTSKLM/IMG-20260118-WA0009.jpg" alt="ساتر مودرن">
+                <img src="https://i.postimg.cc/JnXTSKLM/IMG-20260118-WA0009.jpg" alt="ساتر مودرن" draggable="false">
                 <figcaption class="gallery-caption">ساتر مودرن</figcaption>
             </figure>
             <!-- 24 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/V6t72481/s.jpg" alt="ساتر بسيط">
+                <img src="https://i.postimg.cc/V6t72481/s.jpg" alt="ساتر بسيط" draggable="false">
                 <figcaption class="gallery-caption">ساتر بسيط</figcaption>
             </figure>
             <!-- 25 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/ZRNfXjSz/s1.jpg" alt="ساتر حديقة">
+                <img src="https://i.postimg.cc/ZRNfXjSz/s1.jpg" alt="ساتر حديقة" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديقة</figcaption>
             </figure>
             <!-- 26 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/XJ52txbW/s11.jpg" alt="ساتر مع باب">
+                <img src="https://i.postimg.cc/XJ52txbW/s11.jpg" alt="ساتر مع باب" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع باب</figcaption>
             </figure>
             <!-- 27 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/k4SjLwmm/s3.jpg" alt="ساتر خشب داكن">
+                <img src="https://i.postimg.cc/k4SjLwmm/s3.jpg" alt="ساتر خشب داكن" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب داكن</figcaption>
             </figure>
             <!-- 28 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/ydRf2nzM/s4.jpg" alt="ساتر حديد أبيض">
+                <img src="https://i.postimg.cc/ydRf2nzM/s4.jpg" alt="ساتر حديد أبيض" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد أبيض</figcaption>
             </figure>
             <!-- 29 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/LXPyGvpK/s5.jpg" alt="ساتر مع إضاءة">
+                <img src="https://i.postimg.cc/LXPyGvpK/s5.jpg" alt="ساتر مع إضاءة" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع إضاءة</figcaption>
             </figure>
             <!-- 30 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/mD9dKVsg/slider1.jpg" alt="ساتر فاخر">
+                <img src="https://i.postimg.cc/mD9dKVsg/slider1.jpg" alt="ساتر فاخر" draggable="false">
                 <figcaption class="gallery-caption">ساتر فاخر</figcaption>
             </figure>
             <!-- 31 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rm4h7gkL/swatr.jpg" alt="ساتر للمجالس">
+                <img src="https://i.postimg.cc/rm4h7gkL/swatr.jpg" alt="ساتر للمجالس" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمجالس</figcaption>
             </figure>
             <!-- 32 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fTSNwt7h/176eee6883d22e4a318ef54f224a7257.webp" alt="ساتر خشبي طبيعي">
+                <img src="https://i.postimg.cc/fTSNwt7h/176eee6883d22e4a318ef54f224a7257.webp" alt="ساتر خشبي طبيعي" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشبي طبيعي</figcaption>
             </figure>
             <!-- 33 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/tRMbQtxf/9c1d148837292614f54245b47892e637.webp" alt="ساتر حديدي">
+                <img src="https://i.postimg.cc/tRMbQtxf/9c1d148837292614f54245b47892e637.webp" alt="ساتر حديدي" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديدي</figcaption>
             </figure>
             <!-- 34 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NGztq7XB/ab82277360278685b9390ec1413b126f-1.webp" alt="ساتر للمسابح">
+                <img src="https://i.postimg.cc/NGztq7XB/ab82277360278685b9390ec1413b126f-1.webp" alt="ساتر للمسابح" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمسابح</figcaption>
             </figure>
             <!-- 35 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/DfMhkdG7/c12fafad4c7636564831cf3afecb900b-576x1024.webp" alt="ساتر مع أعمدة">
+                <img src="https://i.postimg.cc/DfMhkdG7/c12fafad4c7636564831cf3afecb900b-576x1024.webp" alt="ساتر مع أعمدة" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع أعمدة</figcaption>
             </figure>
             <!-- 36 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/2jKYRFZX/c231626a8507dff2adff71acf83c10c5-1.webp" alt="ساتر خشب عصرية">
+                <img src="https://i.postimg.cc/2jKYRFZX/c231626a8507dff2adff71acf83c10c5-1.webp" alt="ساتر خشب عصرية" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب عصرية</figcaption>
             </figure>
             <!-- 37 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/SNYhy2Lb/d0755e19cb6c32d06e65c04514468028-4.webp" alt="ساتر حديد مودرن">
+                <img src="https://i.postimg.cc/SNYhy2Lb/d0755e19cb6c32d06e65c04514468028-4.webp" alt="ساتر حديد مودرن" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد مودرن</figcaption>
             </figure>
             <!-- 38 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7PW48Mzv/d27d4336fda066eaba42a9e490a264da-8.webp" alt="ساتر للمداخل">
+                <img src="https://i.postimg.cc/7PW48Mzv/d27d4336fda066eaba42a9e490a264da-8.webp" alt="ساتر للمداخل" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمداخل</figcaption>
             </figure>
             <!-- 39 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/66mKJLvk/d4c566c14b5bb7b004b37db10c5e0195-3.webp" alt="ساتر خشب فاخر">
+                <img src="https://i.postimg.cc/66mKJLvk/d4c566c14b5bb7b004b37db10c5e0195-3.webp" alt="ساتر خشب فاخر" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب فاخر</figcaption>
             </figure>
             <!-- 40 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/J728VcXr/ee7b2eee09095e052f6d770b12c5f722.webp" alt="ساتر مع نباتات">
+                <img src="https://i.postimg.cc/J728VcXr/ee7b2eee09095e052f6d770b12c5f722.webp" alt="ساتر مع نباتات" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع نباتات</figcaption>
             </figure>
             <!-- 41 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fWrsnjdb/f4261b3ad762419aeb51b6a7a68bda28.webp" alt="ساتر حديد بسيط">
+                <img src="https://i.postimg.cc/fWrsnjdb/f4261b3ad762419aeb51b6a7a68bda28.webp" alt="ساتر حديد بسيط" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد بسيط</figcaption>
             </figure>
             <!-- 42 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nrgf4pxQ/IMG-20240421-WA0001.webp" alt="ساتر خشب كلاسيك">
+                <img src="https://i.postimg.cc/nrgf4pxQ/IMG-20240421-WA0001.webp" alt="ساتر خشب كلاسيك" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب كلاسيك</figcaption>
             </figure>
             <!-- 43 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/6qgxrtKv/IMG-20240421-WA0004.webp" alt="ساتر حدائق">
+                <img src="https://i.postimg.cc/6qgxrtKv/IMG-20240421-WA0004.webp" alt="ساتر حدائق" draggable="false">
                 <figcaption class="gallery-caption">ساتر حدائق</figcaption>
             </figure>
             <!-- 44 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Rhyx74m3/IMG-20240421-WA0009.webp" alt="ساتر للمجالس">
+                <img src="https://i.postimg.cc/Rhyx74m3/IMG-20240421-WA0009.webp" alt="ساتر للمجالس" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمجالس</figcaption>
             </figure>
             <!-- 45 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/C5XpGS0d/IMG-20240421-WA0011.webp" alt="ساتر مع أعمدة">
+                <img src="https://i.postimg.cc/C5XpGS0d/IMG-20240421-WA0011.webp" alt="ساتر مع أعمدة" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع أعمدة</figcaption>
             </figure>
             <!-- 46 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/WzCcGTVz/IMG-20240421-WA0012.webp" alt="ساتر خشب داكن">
+                <img src="https://i.postimg.cc/WzCcGTVz/IMG-20240421-WA0012.webp" alt="ساتر خشب داكن" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب داكن</figcaption>
             </figure>
             <!-- 47 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/PJ9nWTHC/IMG-20240421-WA0018.webp" alt="ساتر حديد">
+                <img src="https://i.postimg.cc/PJ9nWTHC/IMG-20240421-WA0018.webp" alt="ساتر حديد" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد</figcaption>
             </figure>
             <!-- 48 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/PJ9nWTHx/IMG-20240421-WA0019.webp" alt="ساتر مع إضاءة">
+                <img src="https://i.postimg.cc/PJ9nWTHx/IMG-20240421-WA0019.webp" alt="ساتر مع إضاءة" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع إضاءة</figcaption>
             </figure>
             <!-- 49 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/MHNJ7qwq/IMG-20240421-WA0020.webp" alt="ساتر للمسابح">
+                <img src="https://i.postimg.cc/MHNJ7qwq/IMG-20240421-WA0020.webp" alt="ساتر للمسابح" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمسابح</figcaption>
             </figure>
             <!-- 50 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/hv6RLcnS/IMG-20240421-WA0022.webp" alt="ساتر خشب">
+                <img src="https://i.postimg.cc/hv6RLcnS/IMG-20240421-WA0022.webp" alt="ساتر خشب" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب</figcaption>
             </figure>
             <!-- 51 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NFSv6Bt0/IMG-20240421-WA0023.webp" alt="ساتر حدائق">
+                <img src="https://i.postimg.cc/NFSv6Bt0/IMG-20240421-WA0023.webp" alt="ساتر حدائق" draggable="false">
                 <figcaption class="gallery-caption">ساتر حدائق</figcaption>
             </figure>
             <!-- 52 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/mkJWYB4g/IMG-20240421-WA0024.webp" alt="ساتر مع باب">
+                <img src="https://i.postimg.cc/mkJWYB4g/IMG-20240421-WA0024.webp" alt="ساتر مع باب" draggable="false">
                 <figcaption class="gallery-caption">ساتر مع باب</figcaption>
             </figure>
             <!-- 53 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/pr4MfRvP/IMG-20240421-WA0025.webp" alt="ساتر مودرن">
+                <img src="https://i.postimg.cc/pr4MfRvP/IMG-20240421-WA0025.webp" alt="ساتر مودرن" draggable="false">
                 <figcaption class="gallery-caption">ساتر مودرن</figcaption>
             </figure>
             <!-- 54 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/brWfxpPh/IMG-20240421-WA0026.webp" alt="ساتر فاخر">
+                <img src="https://i.postimg.cc/brWfxpPh/IMG-20240421-WA0026.webp" alt="ساتر فاخر" draggable="false">
                 <figcaption class="gallery-caption">ساتر فاخر</figcaption>
             </figure>
             <!-- 55 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/HWhmD4y3/mqawl-swatr-fy-alahsaʾ-10.webp" alt="ساتر خشبي">
+                <img src="https://i.postimg.cc/HWhmD4y3/mqawl-swatr-fy-alahsaʾ-10.webp" alt="ساتر خشبي" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشبي</figcaption>
             </figure>
             <!-- 56 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fWrsnj9C/mqawl-swatr-fy-alahsaʾ-12.webp" alt="ساتر حديد">
+                <img src="https://i.postimg.cc/fWrsnj9C/mqawl-swatr-fy-alahsaʾ-12.webp" alt="ساتر حديد" draggable="false">
                 <figcaption class="gallery-caption">ساتر حديد</figcaption>
             </figure>
-            <!-- 57 (الروابط التالية التالفة تم تخطيها) -->
             <!-- 58 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/05BvRdwV/mqawl-swatr-fy-alahsaʾ-7.webp" alt="ساتر للمجالس">
+                <img src="https://i.postimg.cc/05BvRdwV/mqawl-swatr-fy-alahsaʾ-7.webp" alt="ساتر للمجالس" draggable="false">
                 <figcaption class="gallery-caption">ساتر للمجالس</figcaption>
             </figure>
             <!-- 59 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/pV6vbYFG/mqawl-swatr-fy-alahsaʾ-8.webp" alt="ساتر حدائق">
+                <img src="https://i.postimg.cc/pV6vbYFG/mqawl-swatr-fy-alahsaʾ-8.webp" alt="ساتر حدائق" draggable="false">
                 <figcaption class="gallery-caption">ساتر حدائق</figcaption>
             </figure>
             <!-- 60 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/FFBv5gLP/mqawl-swatr-fy-alahsaʾ-9.jpg" alt="ساتر خشب">
+                <img src="https://i.postimg.cc/FFBv5gLP/mqawl-swatr-fy-alahsaʾ-9.jpg" alt="ساتر خشب" draggable="false">
                 <figcaption class="gallery-caption">ساتر خشب</figcaption>
             </figure>
         </div>
@@ -679,6 +776,31 @@
             </ul>
         </div>
 
+        <!-- قسم روابط جميع خدمات الموقع -->
+        <div class="services-links">
+            <h2>خدماتنا الأخرى</h2>
+            <div class="links-grid">
+                <a href="https://almizalaat5-max.github.io/almi/">الرئيسية</a>
+                <a href="https://almizalaat5-max.github.io/almi/khayam.html">خيام ملكية</a>
+                <a href="https://almizalaat5-max.github.io/almi/brjulat.html">برجولات خشبية</a>
+                <a href="https://almizalaat5-max.github.io/almi/sawatir.html">سواتر</a>
+                <a href="https://almizalaat5-max.github.io/almi/tansiq-hadayeq.html">تنسيق حدائق</a>
+                <a href="https://almizalaat5-max.github.io/almi/decorat.html">ديكورات داخلية وخارجية</a>
+                <a href="https://almizalaat5-max.github.io/almi/mazallat.html">مظلات سيارات ومسابح</a>
+                <a href="https://almizalaat5-max.github.io/almi/qarmid.html">قرميد</a>
+                <a href="https://almizalaat5-max.github.io/almi/hanajit.html">هناجر ومستودعات وغرف سندويش بنل</a>
+            </div>
+        </div>
+
+        <!-- قسم المحتوى الثري (SEO) -->
+        <div class="seo-content">
+            <h2>أفضل سواتر خشب وحديد في الأحساء</h2>
+            <p>تُعد <strong>السواتر</strong> من العناصر الأساسية لتوفير الخصوصية والأمان للمساحات الخارجية في المنازل والفلل والاستراحات في الأحساء. في <strong>رواد المظلات</strong>، نقدم لكم تشكيلة واسعة من <strong>أفضل السواتر الخشبية والحديدية والقماشية</strong> التي تجمع بين الجمال والوظيفة والمتانة. سواء كنتم تبحثون عن <strong>سواتر خشبية كلاسيكية</strong> أو <strong>سواتر حديدية عصرية</strong> أو <strong>سواتر قماش متحركة</strong>، فإن فريقنا من المصممين والفنيين المتخصصين يضمن لكم تنفيذ أرقى التصاميم بدقة عالية وفي وقت قياسي.</p>
+            <p>نحن نستخدم <strong>أجود أنواع الخامات</strong> في تصنيع السواتر مثل <strong>الخشب الطبيعي المعالج</strong> (السويدي، الفنلندي، الأمريكي) و<strong>الحديد المجلفن المقاوم للصدأ</strong> و<strong>أقمشة PVC العازلة</strong>. جميع موادنا مقاومة للعوامل الجوية القاسية في المنطقة من حرارة ورطوبة وأمطار وغبار، مما يضمن عمراً افتراضياً طويلاً للسواتر. كما نحرص على استخدام أحدث تقنيات <strong>الدهانات العازلة</strong> و<strong>المعالجات الحرارية</strong> للخشب لضمان أعلى مستويات الجودة.</p>
+            <p>لا تقتصر خدماتنا على <strong>تصميم وتنفيذ السواتر</strong> فحسب، بل نمتد لتشمل <strong>تركيب السواتر</strong> في جميع مدن وقرى الأحساء (الهفوف، المبرز، العيون، الجفر، بقيق، وغيرها) بأسرع وقت وبأعلى جودة. نقدم لكم <strong>أسعاراً تنافسية</strong> تناسب جميع الفئات مع <strong>ضمان على المواد والتنفيذ</strong>. كما نوفر لكم إمكانية <strong>تصميم سواتر حسب الطلب</strong> لتناسب المساحات المختلفة وذوقكم الخاص.</p>
+            <p>سواء كنتم بحاجة إلى <strong>ساتر خشبي للحديقة</strong>، أو <strong>ساتر حديدي للمجلس الخارجي</strong>، أو <strong>ساتر قماش متحرك للمسبح</strong>، أو حتى <strong>سواتر للمداخل والممرات</strong>، فإننا نوفر لكم حلولاً مبتكرة تجمع بين الجمال والوظيفة. كما نقدم خدمات <strong>صيانة وترميم السواتر</strong> وإعادة تأهيلها بأحدث الأساليب. تواصلوا معنا الآن لتحصلوا على <strong>أفضل السواتر في الأحساء</strong> بأسعار لا تقبل المنافسة.</p>
+        </div>
+
         <!-- زر الاتصال -->
         <div class="contact-section">
             <a href="https://wa.me/966567045945" class="contact-btn" target="_blank">
@@ -687,23 +809,33 @@
         </div>
     </main>
 
-    <!-- التذييل -->
+    <!-- التذييل مع اسم المصمم -->
     <footer>
         <div class="container">
             <p>© 2026 رواد المظلات في الأحساء - جميع الحقوق محفوظة</p>
+            <div class="designer-credit">
+                تصميم <a href="#" target="_blank">سليمان الحكمي</a> 0551987351
+            </div>
         </div>
     </footer>
 
-    <!-- كود JavaScript للتحكم في الترويسة -->
+    <!-- كود JavaScript لحماية الصور -->
     <script>
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('mainHeader');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        // منع النقر بزر الماوس الأيمن على الصور فقط
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                return false;
+            });
+        });
+
+        // منع اختصارات لوحة المفاتيح لنسخ الصور
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 's' || e.key === 'p')) {
+                e.preventDefault();
+                return false;
             }
         });
     </script>
 </body>
-                  </html>
+                    </html>
