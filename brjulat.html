@@ -41,6 +41,17 @@
             max-width: 100%;
             height: auto;
             display: block;
+            /* حماية الصور: منع السحب والتحديد */
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none; /* يمنع التفاعل مع الصورة مباشرة */
         }
         a {
             text-decoration: none;
@@ -180,7 +191,7 @@
             .page-title h1 { font-size: 2.5rem; }
             .page-title p { font-size: 1.2rem; }
         }
-        /* معرض الصور */
+        /* معرض الصور - مع طبقة حماية إضافية */
         .gallery {
             display: grid;
             grid-template-columns: 1fr;
@@ -210,16 +221,31 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: 0.3s;
+            position: relative; /* لطبقة الحماية */
         }
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        /* طبقة شفافة فوق الصورة لمنع النقر والنسخ */
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2; /* فوق الصورة */
+            pointer-events: none; /* لا تمنع التفاعل مع العناصر الأخرى، لكنها تغطي الصورة */
         }
         .gallery-item img {
             width: 100%;
             aspect-ratio: 4/3;
             object-fit: cover;
             display: block;
+            position: relative;
+            z-index: 1;
         }
         .gallery-caption {
             padding: 10px;
@@ -229,6 +255,8 @@
             color: var(--accent-brown);
             font-weight: 500;
             text-align: center;
+            position: relative;
+            z-index: 3;
         }
         @media (min-width: 768px) {
             .gallery-caption {
@@ -289,7 +317,7 @@
             border-right: 3px solid var(--primary-beige);
             box-shadow: var(--shadow);
         }
-        /* قسم روابط الخدمات (جديد) */
+        /* قسم روابط الخدمات */
         .services-links {
             background: white;
             padding: 25px 20px;
@@ -452,591 +480,591 @@
             <p>تصاميم عصرية وتقليدية توفر الظل والخصوصية في حديقة منزلك</p>
         </div>
 
-        <!-- معرض الصور (جميع الروابط التي تعمل) -->
+        <!-- معرض الصور (جميع الروابط التي تعمل) مع حماية -->
         <div class="gallery">
             <!-- 1 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BvLPCVxh/5285107341525191428-120.jpg" alt="برجولة خشبية عصرية">
+                <img src="https://i.postimg.cc/BvLPCVxh/5285107341525191428-120.jpg" alt="برجولة خشبية عصرية" draggable="false">
                 <figcaption class="gallery-caption">برجولة خشبية عصرية</figcaption>
             </figure>
             <!-- 2 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/FKdkxBjC/5285107341525191429-120.jpg" alt="برجولة مع إضاءة ليلية">
+                <img src="https://i.postimg.cc/FKdkxBjC/5285107341525191429-120.jpg" alt="برجولة مع إضاءة ليلية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ليلية</figcaption>
             </figure>
             <!-- 3 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/kghtKmtH/5285107341525191430-120.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/kghtKmtH/5285107341525191430-120.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 4 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/vZS6fs6C/5285107341525191431-120.jpg" alt="برجولة خشبية مع ستائر">
+                <img src="https://i.postimg.cc/vZS6fs6C/5285107341525191431-120.jpg" alt="برجولة خشبية مع ستائر" draggable="false">
                 <figcaption class="gallery-caption">برجولة خشبية مع ستائر</figcaption>
             </figure>
             <!-- 5 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Z5DypSyg/5285107341525191432-120.jpg" alt="برجولة حديثة للمسابح">
+                <img src="https://i.postimg.cc/Z5DypSyg/5285107341525191432-120.jpg" alt="برجولة حديثة للمسابح" draggable="false">
                 <figcaption class="gallery-caption">برجولة حديثة للمسابح</figcaption>
             </figure>
             <!-- 6 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/T3HWg6WF/5285107341525191433-120.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/T3HWg6WF/5285107341525191433-120.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 8 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/g0XLKTv4/5285107341525191435-121.jpg" alt="برجولة مع مظلة جانبية">
+                <img src="https://i.postimg.cc/g0XLKTv4/5285107341525191435-121.jpg" alt="برجولة مع مظلة جانبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة جانبية</figcaption>
             </figure>
             <!-- 9 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/jSkJPbJG/5285107341525191455-121.jpg" alt="برجولة كلاسيكية">
+                <img src="https://i.postimg.cc/jSkJPbJG/5285107341525191455-121.jpg" alt="برجولة كلاسيكية" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية</figcaption>
             </figure>
             <!-- 10 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/GmSsGCsz/5285107341525191459-120.jpg" alt="برجولة مع إضاءة مخفية">
+                <img src="https://i.postimg.cc/GmSsGCsz/5285107341525191459-120.jpg" alt="برجولة مع إضاءة مخفية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة مخفية</figcaption>
             </figure>
             <!-- 11 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/RZbnKBnX/5285107341525191460-120.jpg" alt="برجولة مع أرضيات خشبية">
+                <img src="https://i.postimg.cc/RZbnKBnX/5285107341525191460-120.jpg" alt="برجولة مع أرضيات خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أرضيات خشبية</figcaption>
             </figure>
             <!-- 12 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nhwQBJQR/5285107341525191461-120.jpg" alt="برجولة عصرية مع مقاعد">
+                <img src="https://i.postimg.cc/nhwQBJQR/5285107341525191461-120.jpg" alt="برجولة عصرية مع مقاعد" draggable="false">
                 <figcaption class="gallery-caption">برجولة عصرية مع مقاعد</figcaption>
             </figure>
             <!-- 13 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/52kFLVFK/5285107341525191462-120.jpg" alt="برجولة مع زخارف خشبية">
+                <img src="https://i.postimg.cc/52kFLVFK/5285107341525191462-120.jpg" alt="برجولة مع زخارف خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع زخارف خشبية</figcaption>
             </figure>
             <!-- 14 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/QdnW13WJ/5285107341525191463-121.jpg" alt="برجولة مع إضاءة ناعمة">
+                <img src="https://i.postimg.cc/QdnW13WJ/5285107341525191463-121.jpg" alt="برجولة مع إضاءة ناعمة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ناعمة</figcaption>
             </figure>
             <!-- 15 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/3xbDmTDZ/5285107341525191464-121.jpg" alt="برجولة مع مظلة متحركة">
+                <img src="https://i.postimg.cc/3xbDmTDZ/5285107341525191464-121.jpg" alt="برجولة مع مظلة متحركة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة متحركة</figcaption>
             </figure>
             <!-- 16 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/JzdBZLBq/5285107341525191465-120.jpg" alt="برجولة مع جلسات عربية">
+                <img src="https://i.postimg.cc/JzdBZLBq/5285107341525191465-120.jpg" alt="برجولة مع جلسات عربية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات عربية</figcaption>
             </figure>
             <!-- 17 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/jSkJPbJc/5285107341525191466-120.jpg" alt="برجولة مع نوافذ خشبية">
+                <img src="https://i.postimg.cc/jSkJPbJc/5285107341525191466-120.jpg" alt="برجولة مع نوافذ خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع نوافذ خشبية</figcaption>
             </figure>
             <!-- 18 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/4xFhVghb/5285107341525191467-120.jpg" alt="برجولة مع أعمدة حجرية">
+                <img src="https://i.postimg.cc/4xFhVghb/5285107341525191467-120.jpg" alt="برجولة مع أعمدة حجرية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة حجرية</figcaption>
             </figure>
             <!-- 19 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7ZQT0kT1/5285107341525191468-121.jpg" alt="برجولة مع سقف خشبي">
+                <img src="https://i.postimg.cc/7ZQT0kT1/5285107341525191468-121.jpg" alt="برجولة مع سقف خشبي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف خشبي</figcaption>
             </figure>
             <!-- 20 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fRg0mN00/5285107341525191469-120.jpg" alt="برجولة مع إضاءة خارجية">
+                <img src="https://i.postimg.cc/fRg0mN00/5285107341525191469-120.jpg" alt="برجولة مع إضاءة خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة خارجية</figcaption>
             </figure>
             <!-- 21 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/DwYbLTbJ/5285107341525191470-120.jpg" alt="برجولة حديثة مع أرضيات">
+                <img src="https://i.postimg.cc/DwYbLTbJ/5285107341525191470-120.jpg" alt="برجولة حديثة مع أرضيات" draggable="false">
                 <figcaption class="gallery-caption">برجولة حديثة مع أرضيات</figcaption>
             </figure>
             <!-- 22 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/P5F8Yj8m/5285107341525191471-121.jpg" alt="برجولة مع تكييف">
+                <img src="https://i.postimg.cc/P5F8Yj8m/5285107341525191471-121.jpg" alt="برجولة مع تكييف" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع تكييف</figcaption>
             </figure>
             <!-- 23 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/cL58wS8t/5285107341525191472-120.jpg" alt="برجولة مع ستائر شفافة">
+                <img src="https://i.postimg.cc/cL58wS8t/5285107341525191472-120.jpg" alt="برجولة مع ستائر شفافة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر شفافة</figcaption>
             </figure>
             <!-- 24 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/0yHJDsJD/5285107341525191473-120.jpg" alt="برجولة كلاسيكية فاخرة">
+                <img src="https://i.postimg.cc/0yHJDsJD/5285107341525191473-120.jpg" alt="برجولة كلاسيكية فاخرة" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية فاخرة</figcaption>
             </figure>
             <!-- 25 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/sg0Z7rZS/5285107341525191474-121.jpg" alt="برجولة مع إضاءة ليد">
+                <img src="https://i.postimg.cc/sg0Z7rZS/5285107341525191474-121.jpg" alt="برجولة مع إضاءة ليد" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ليد</figcaption>
             </figure>
             <!-- 26 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/dVSTrYTL/5285107341525191475-121.jpg" alt="برجولة مع أعمدة رخامية">
+                <img src="https://i.postimg.cc/dVSTrYTL/5285107341525191475-121.jpg" alt="برجولة مع أعمدة رخامية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة رخامية</figcaption>
             </figure>
             <!-- 27 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Z5qdWR0R/5285107341525191476-119.jpg" alt="برجولة مع سقف قرميدي">
+                <img src="https://i.postimg.cc/Z5qdWR0R/5285107341525191476-119.jpg" alt="برجولة مع سقف قرميدي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف قرميدي</figcaption>
             </figure>
             <!-- 28 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/3xwvkRW2/5285107341525191477-121.jpg" alt="برجولة مع إضاءة ملونة">
+                <img src="https://i.postimg.cc/3xwvkRW2/5285107341525191477-121.jpg" alt="برجولة مع إضاءة ملونة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ملونة</figcaption>
             </figure>
             <!-- 29 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/VkNCJ65j/5285107341525191478-121.jpg" alt="برجولة مع مظلة جانبية">
+                <img src="https://i.postimg.cc/VkNCJ65j/5285107341525191478-121.jpg" alt="برجولة مع مظلة جانبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة جانبية</figcaption>
             </figure>
             <!-- 30 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Cx6fkgfR/5285107341525191479-120.jpg" alt="برجولة مع جلسات مريحة">
+                <img src="https://i.postimg.cc/Cx6fkgfR/5285107341525191479-120.jpg" alt="برجولة مع جلسات مريحة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات مريحة</figcaption>
             </figure>
             <!-- 31 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/jSj7D5Cn/5285107341525191480-120.jpg" alt="برجولة عصرية مع زخارف">
+                <img src="https://i.postimg.cc/jSj7D5Cn/5285107341525191480-120.jpg" alt="برجولة عصرية مع زخارف" draggable="false">
                 <figcaption class="gallery-caption">برجولة عصرية مع زخارف</figcaption>
             </figure>
             <!-- 32 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rwprDmzr/5285107341525191481-121.jpg" alt="برجولة مع أعمدة مزخرفة">
+                <img src="https://i.postimg.cc/rwprDmzr/5285107341525191481-121.jpg" alt="برجولة مع أعمدة مزخرفة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة مزخرفة</figcaption>
             </figure>
             <!-- 33 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/RZ0HWFq6/5285107341525191482-120.jpg" alt="برجولة مع سقف مائل">
+                <img src="https://i.postimg.cc/RZ0HWFq6/5285107341525191482-120.jpg" alt="برجولة مع سقف مائل" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف مائل</figcaption>
             </figure>
             <!-- 34 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/CxKqR1dD/5285107341525191483-121.jpg" alt="برجولة مع إضاءة خارجية">
+                <img src="https://i.postimg.cc/CxKqR1dD/5285107341525191483-121.jpg" alt="برجولة مع إضاءة خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة خارجية</figcaption>
             </figure>
             <!-- 35 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/dV0yh1D0/5285107341525191484-120.jpg" alt="برجولة مع أرضيات خشبية">
+                <img src="https://i.postimg.cc/dV0yh1D0/5285107341525191484-120.jpg" alt="برجولة مع أرضيات خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أرضيات خشبية</figcaption>
             </figure>
             <!-- 36 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/8zC675sz/5285107341525191485-120.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/8zC675sz/5285107341525191485-120.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 37 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/SxKMnsjn/5285107341525191486-121.jpg" alt="برجولة مع ستائر عربية">
+                <img src="https://i.postimg.cc/SxKMnsjn/5285107341525191486-121.jpg" alt="برجولة مع ستائر عربية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر عربية</figcaption>
             </figure>
             <!-- 38 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/2S5Z163j/5285107341525191488-120.jpg" alt="برجولة مع إضاءة مخفية">
+                <img src="https://i.postimg.cc/2S5Z163j/5285107341525191488-120.jpg" alt="برجولة مع إضاءة مخفية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة مخفية</figcaption>
             </figure>
             <!-- 39 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/htGdXjhP/5285107341525191489-120.jpg" alt="برجولة مع مظلة قماشية">
+                <img src="https://i.postimg.cc/htGdXjhP/5285107341525191489-120.jpg" alt="برجولة مع مظلة قماشية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة قماشية</figcaption>
             </figure>
             <!-- 40 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Jzhksntr/5285107341525191524-121.jpg" alt="برجولة خشبية طبيعية">
+                <img src="https://i.postimg.cc/Jzhksntr/5285107341525191524-121.jpg" alt="برجولة خشبية طبيعية" draggable="false">
                 <figcaption class="gallery-caption">برجولة خشبية طبيعية</figcaption>
             </figure>
             <!-- 41 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/rwprDmzM/5289875884800150547-121.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/rwprDmzM/5289875884800150547-121.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 42 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/K8YM1z4F/5289875884800150548-121.jpg" alt="برجولة مع إضاءة ليلية">
+                <img src="https://i.postimg.cc/K8YM1z4F/5289875884800150548-121.jpg" alt="برجولة مع إضاءة ليلية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ليلية</figcaption>
             </figure>
             <!-- 43 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/FHKLYR1v/5296776303811955556-121.jpg" alt="برجولة مع جلسات مريحة">
+                <img src="https://i.postimg.cc/FHKLYR1v/5296776303811955556-121.jpg" alt="برجولة مع جلسات مريحة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات مريحة</figcaption>
             </figure>
             <!-- 44 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fTCdWXWw/5296776303811955557-121.jpg" alt="برجولة عصرية">
+                <img src="https://i.postimg.cc/fTCdWXWw/5296776303811955557-121.jpg" alt="برجولة عصرية" draggable="false">
                 <figcaption class="gallery-caption">برجولة عصرية</figcaption>
             </figure>
             <!-- 45 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NfDXGTs3/5296776303811955558-121.jpg" alt="برجولة مع سقف خشبي">
+                <img src="https://i.postimg.cc/NfDXGTs3/5296776303811955558-121.jpg" alt="برجولة مع سقف خشبي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف خشبي</figcaption>
             </figure>
             <!-- 46 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NfDXGTGh/5296776303811955559-121.jpg" alt="برجولة مع إضاءة ناعمة">
+                <img src="https://i.postimg.cc/NfDXGTGh/5296776303811955559-121.jpg" alt="برجولة مع إضاءة ناعمة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ناعمة</figcaption>
             </figure>
             <!-- 47 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/pXCjV8W7/5296776303811955565-121.jpg" alt="برجولة مع أعمدة حجرية">
+                <img src="https://i.postimg.cc/pXCjV8W7/5296776303811955565-121.jpg" alt="برجولة مع أعمدة حجرية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة حجرية</figcaption>
             </figure>
             <!-- 48 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7Y9zP7HK/5296776303811955576-121.jpg" alt="برجولة مع مظلة جانبية">
+                <img src="https://i.postimg.cc/7Y9zP7HK/5296776303811955576-121.jpg" alt="برجولة مع مظلة جانبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة جانبية</figcaption>
             </figure>
             <!-- 49 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/sDmWfSjw/5296776303811955577-121.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/sDmWfSjw/5296776303811955577-121.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 50 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/PryDfZXK/5296776303811955578-121.jpg" alt="برجولة مع إضاءة ملونة">
+                <img src="https://i.postimg.cc/PryDfZXK/5296776303811955578-121.jpg" alt="برجولة مع إضاءة ملونة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ملونة</figcaption>
             </figure>
             <!-- 51 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/J4xX7Jr2/5296776303811955579-121.jpg" alt="برجولة مع سقف قرميدي">
+                <img src="https://i.postimg.cc/J4xX7Jr2/5296776303811955579-121.jpg" alt="برجولة مع سقف قرميدي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف قرميدي</figcaption>
             </figure>
             <!-- 52 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/bNgnYbyT/5296776303811955580-119.jpg" alt="برجولة كلاسيكية فاخرة">
+                <img src="https://i.postimg.cc/bNgnYbyT/5296776303811955580-119.jpg" alt="برجولة كلاسيكية فاخرة" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية فاخرة</figcaption>
             </figure>
             <!-- 53 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/WbTrPSv6/5309895887007977395-121.jpg" alt="برجولة مع إضاءة خارجية">
+                <img src="https://i.postimg.cc/WbTrPSv6/5309895887007977395-121.jpg" alt="برجولة مع إضاءة خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة خارجية</figcaption>
             </figure>
             <!-- 54 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/MK5BZR6m/5309895887007977396-119.jpg" alt="برجولة مع أرضيات خشبية">
+                <img src="https://i.postimg.cc/MK5BZR6m/5309895887007977396-119.jpg" alt="برجولة مع أرضيات خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أرضيات خشبية</figcaption>
             </figure>
             <!-- 55 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/4NstTwgF/5309895887007977398-120.jpg" alt="برجولة حديثة مع إضاءة">
+                <img src="https://i.postimg.cc/4NstTwgF/5309895887007977398-120.jpg" alt="برجولة حديثة مع إضاءة" draggable="false">
                 <figcaption class="gallery-caption">برجولة حديثة مع إضاءة</figcaption>
             </figure>
             <!-- 56 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/bNpbjLhC/5309895887007977399-120.jpg" alt="برجولة مع ستائر شفافة">
+                <img src="https://i.postimg.cc/bNpbjLhC/5309895887007977399-120.jpg" alt="برجولة مع ستائر شفافة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر شفافة</figcaption>
             </figure>
             <!-- 57 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/02PmqZsV/5309895887007977400-120.jpg" alt="برجولة مع جلسات مريحة">
+                <img src="https://i.postimg.cc/02PmqZsV/5309895887007977400-120.jpg" alt="برجولة مع جلسات مريحة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات مريحة</figcaption>
             </figure>
             <!-- 58 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/pXR8tkHc/5309895887007977401-121.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/pXR8tkHc/5309895887007977401-121.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 59 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/65tRNzXz/5309895887007977402-120.jpg" alt="برجولة مع سقف مائل">
+                <img src="https://i.postimg.cc/65tRNzXz/5309895887007977402-120.jpg" alt="برجولة مع سقف مائل" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف مائل</figcaption>
             </figure>
             <!-- 60 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/TYfmXQ60/5309895887007977403-121.jpg" alt="برجولة مع إضاءة ناعمة">
+                <img src="https://i.postimg.cc/TYfmXQ60/5309895887007977403-121.jpg" alt="برجولة مع إضاءة ناعمة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ناعمة</figcaption>
             </figure>
             <!-- 61 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/pXR8tkHZ/5309895887007977409-119.jpg" alt="برجولة كلاسيكية">
+                <img src="https://i.postimg.cc/pXR8tkHZ/5309895887007977409-119.jpg" alt="برجولة كلاسيكية" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية</figcaption>
             </figure>
             <!-- 62 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fTDXh5Nv/5309895887007977410-121.jpg" alt="برجولة مع مظلة قماشية">
+                <img src="https://i.postimg.cc/fTDXh5Nv/5309895887007977410-121.jpg" alt="برجولة مع مظلة قماشية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة قماشية</figcaption>
             </figure>
             <!-- 63 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg" alt="برجولة مع أعمدة رخامية">
+                <img src="https://i.postimg.cc/GhdY1zCY/5348356309826342726-119.jpg" alt="برجولة مع أعمدة رخامية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة رخامية</figcaption>
             </figure>
             <!-- 64 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/X74F0xbG/5375329327215480802-121.jpg" alt="برجولة عصرية مع إضاءة">
+                <img src="https://i.postimg.cc/X74F0xbG/5375329327215480802-121.jpg" alt="برجولة عصرية مع إضاءة" draggable="false">
                 <figcaption class="gallery-caption">برجولة عصرية مع إضاءة</figcaption>
             </figure>
             <!-- 65 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/TYfmXQ6b/5375329327215480803-119.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/TYfmXQ6b/5375329327215480803-119.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 66 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/4NstTwg9/5375329327215480804-121.jpg" alt="برجولة مع سقف خشبي">
+                <img src="https://i.postimg.cc/4NstTwg9/5375329327215480804-121.jpg" alt="برجولة مع سقف خشبي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف خشبي</figcaption>
             </figure>
             <!-- 67 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/L62fMvph/5375329327215480815-119.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/L62fMvph/5375329327215480815-119.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 68 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/ncp7tTJC/5375329327215480816-119.jpg" alt="برجولة مع إضاءة ليلية">
+                <img src="https://i.postimg.cc/ncp7tTJC/5375329327215480816-119.jpg" alt="برجولة مع إضاءة ليلية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ليلية</figcaption>
             </figure>
             <!-- 69 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/sDsSRKrB/5375329327215480817-119.jpg" alt="برجولة مع ستائر عربية">
+                <img src="https://i.postimg.cc/sDsSRKrB/5375329327215480817-119.jpg" alt="برجولة مع ستائر عربية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر عربية</figcaption>
             </figure>
             <!-- 70 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/gkmRP4WJ/5375329327215480818-119.jpg" alt="برجولة مع إضاءة مخفية">
+                <img src="https://i.postimg.cc/gkmRP4WJ/5375329327215480818-119.jpg" alt="برجولة مع إضاءة مخفية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة مخفية</figcaption>
             </figure>
             <!-- 71 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7Yw7yXkZ/5375329327215480821-121.jpg" alt="برجولة حديثة">
+                <img src="https://i.postimg.cc/7Yw7yXkZ/5375329327215480821-121.jpg" alt="برجولة حديثة" draggable="false">
                 <figcaption class="gallery-caption">برجولة حديثة</figcaption>
             </figure>
             <!-- 72 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/xjKH7hWm/5375329327215480822-121.jpg" alt="برجولة مع أعمدة مزخرفة">
+                <img src="https://i.postimg.cc/xjKH7hWm/5375329327215480822-121.jpg" alt="برجولة مع أعمدة مزخرفة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة مزخرفة</figcaption>
             </figure>
             <!-- 73 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/gkmRP4Wj/5375329327215480895-121.jpg" alt="برجولة مع سقف قرميدي">
+                <img src="https://i.postimg.cc/gkmRP4Wj/5375329327215480895-121.jpg" alt="برجولة مع سقف قرميدي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف قرميدي</figcaption>
             </figure>
             <!-- 74 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/kMx8Zzkt/5375329327215480897-121.jpg" alt="برجولة مع إضاءة ملونة">
+                <img src="https://i.postimg.cc/kMx8Zzkt/5375329327215480897-121.jpg" alt="برجولة مع إضاءة ملونة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ملونة</figcaption>
             </figure>
             <!-- 75 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/qB8nYS96/5375329327215480899-121.jpg" alt="برجولة مع جلسات مريحة">
+                <img src="https://i.postimg.cc/qB8nYS96/5375329327215480899-121.jpg" alt="برجولة مع جلسات مريحة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات مريحة</figcaption>
             </figure>
             <!-- 76 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/qB8nYS93/5375329327215480908-121.jpg" alt="برجولة كلاسيكية فاخرة">
+                <img src="https://i.postimg.cc/qB8nYS93/5375329327215480908-121.jpg" alt="برجولة كلاسيكية فاخرة" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية فاخرة</figcaption>
             </figure>
             <!-- 77 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/8khW39q5/5375329327215480914-121.jpg" alt="برجولة مع أرضيات خشبية">
+                <img src="https://i.postimg.cc/8khW39q5/5375329327215480914-121.jpg" alt="برجولة مع أرضيات خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أرضيات خشبية</figcaption>
             </figure>
             <!-- 78 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/3rgp6VPr/5375329327215480915-121.jpg" alt="برجولة مع إضاءة خارجية">
+                <img src="https://i.postimg.cc/3rgp6VPr/5375329327215480915-121.jpg" alt="برجولة مع إضاءة خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة خارجية</figcaption>
             </figure>
             <!-- 79 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/CMjDtXW5/5375329327215480916-119.jpg" alt="برجولة مع مظلة جانبية">
+                <img src="https://i.postimg.cc/CMjDtXW5/5375329327215480916-119.jpg" alt="برجولة مع مظلة جانبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة جانبية</figcaption>
             </figure>
             <!-- 80 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/VsjMTp3k/5375329327215480917-119.jpg" alt="برجولة مع ستائر شفافة">
+                <img src="https://i.postimg.cc/VsjMTp3k/5375329327215480917-119.jpg" alt="برجولة مع ستائر شفافة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر شفافة</figcaption>
             </figure>
             <!-- 81 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/RCcf8yjV/5375329327215480918-119.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/RCcf8yjV/5375329327215480918-119.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 82 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/v8W9jkCC/5375329327215480919-119.jpg" alt="برجولة مع أعمدة حجرية">
+                <img src="https://i.postimg.cc/v8W9jkCC/5375329327215480919-119.jpg" alt="برجولة مع أعمدة حجرية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة حجرية</figcaption>
             </figure>
             <!-- 83 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/HWQ5KRfj/5377619498266988825-120.jpg" alt="برجولة مع سقف خشبي">
+                <img src="https://i.postimg.cc/HWQ5KRfj/5377619498266988825-120.jpg" alt="برجولة مع سقف خشبي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف خشبي</figcaption>
             </figure>
             <!-- 84 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/SR7MMYWX/5447603825691791332-119.jpg" alt="برجولة مع إضاءة ناعمة">
+                <img src="https://i.postimg.cc/SR7MMYWX/5447603825691791332-119.jpg" alt="برجولة مع إضاءة ناعمة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ناعمة</figcaption>
             </figure>
             <!-- 85 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/C5HqqnjR/5447603825691791332-121.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/C5HqqnjR/5447603825691791332-121.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 86 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/RhQHHJc9/5447603825691791333-121.jpg" alt="برجولة مع إضاءة ملونة">
+                <img src="https://i.postimg.cc/RhQHHJc9/5447603825691791333-121.jpg" alt="برجولة مع إضاءة ملونة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ملونة</figcaption>
             </figure>
             <!-- 87 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nrYDD9v9/5447603825691791334-121.jpg" alt="برجولة مع ستائر عربية">
+                <img src="https://i.postimg.cc/nrYDD9v9/5447603825691791334-121.jpg" alt="برجولة مع ستائر عربية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر عربية</figcaption>
             </figure>
             <!-- 88 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/tJtxxnhp/5447603825691791335-121.jpg" alt="برجولة كلاسيكية">
+                <img src="https://i.postimg.cc/tJtxxnhp/5447603825691791335-121.jpg" alt="برجولة كلاسيكية" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية</figcaption>
             </figure>
             <!-- 89 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/6qLvv4dB/5447603825691791336-119.jpg" alt="برجولة مع جلسات مريحة">
+                <img src="https://i.postimg.cc/6qLvv4dB/5447603825691791336-119.jpg" alt="برجولة مع جلسات مريحة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات مريحة</figcaption>
             </figure>
             <!-- 90 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/hvbddQ9S/5447603825691791336-121.jpg" alt="برجولة مع مظلة قماشية">
+                <img src="https://i.postimg.cc/hvbddQ9S/5447603825691791336-121.jpg" alt="برجولة مع مظلة قماشية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة قماشية</figcaption>
             </figure>
             <!-- 91 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fyhdyf0w/5447603825691791337-119.jpg" alt="برجولة مع إضاءة مخفية">
+                <img src="https://i.postimg.cc/fyhdyf0w/5447603825691791337-119.jpg" alt="برجولة مع إضاءة مخفية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة مخفية</figcaption>
             </figure>
             <!-- 92 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/j2Q77nzS/5447603825691791337-121.jpg" alt="برجولة مع سقف مائل">
+                <img src="https://i.postimg.cc/j2Q77nzS/5447603825691791337-121.jpg" alt="برجولة مع سقف مائل" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف مائل</figcaption>
             </figure>
             <!-- 93 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/nrYDD9vr/5447603825691791338-121.jpg" alt="برجولة مع أرضيات خشبية">
+                <img src="https://i.postimg.cc/nrYDD9vr/5447603825691791338-121.jpg" alt="برجولة مع أرضيات خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أرضيات خشبية</figcaption>
             </figure>
             <!-- 94 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/1XcqqVpz/5447603825691791339-121.jpg" alt="برجولة مع إضاءة ليلية">
+                <img src="https://i.postimg.cc/1XcqqVpz/5447603825691791339-121.jpg" alt="برجولة مع إضاءة ليلية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ليلية</figcaption>
             </figure>
             <!-- 95 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/8cVvcmrk/5447603825691791340-119.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/8cVvcmrk/5447603825691791340-119.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 96 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/8cVvcmrz/5447603825691791340-121.jpg" alt="برجولة حديثة">
+                <img src="https://i.postimg.cc/8cVvcmrz/5447603825691791340-121.jpg" alt="برجولة حديثة" draggable="false">
                 <figcaption class="gallery-caption">برجولة حديثة</figcaption>
             </figure>
             <!-- 97 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/1XZFXrN5/5447603825691791341-121.jpg" alt="برجولة مع أعمدة رخامية">
+                <img src="https://i.postimg.cc/1XZFXrN5/5447603825691791341-121.jpg" alt="برجولة مع أعمدة رخامية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة رخامية</figcaption>
             </figure>
             <!-- 98 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/Y0wF0zmS/5447603825691791342-121.jpg" alt="برجولة مع إضاءة ناعمة">
+                <img src="https://i.postimg.cc/Y0wF0zmS/5447603825691791342-121.jpg" alt="برجولة مع إضاءة ناعمة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ناعمة</figcaption>
             </figure>
             <!-- 99 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/fyhdyfSG/5447603825691791343-121.jpg" alt="برجولة مع سقف خشبي">
+                <img src="https://i.postimg.cc/fyhdyfSG/5447603825691791343-121.jpg" alt="برجولة مع سقف خشبي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف خشبي</figcaption>
             </figure>
             <!-- 100 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/BbGFbB1W/5447603825691791344-121.jpg" alt="برجولة مع إضاءة خارجية">
+                <img src="https://i.postimg.cc/BbGFbB1W/5447603825691791344-121.jpg" alt="برجولة مع إضاءة خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة خارجية</figcaption>
             </figure>
             <!-- 101 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/wMdNMQRZ/5447603825691791345-121.jpg" alt="برجولة مع ستائر شفافة">
+                <img src="https://i.postimg.cc/wMdNMQRZ/5447603825691791345-121.jpg" alt="برجولة مع ستائر شفافة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع ستائر شفافة</figcaption>
             </figure>
             <!-- 102 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/D0KG0P4N/5447603825691791346-121.jpg" alt="برجولة كلاسيكية فاخرة">
+                <img src="https://i.postimg.cc/D0KG0P4N/5447603825691791346-121.jpg" alt="برجولة كلاسيكية فاخرة" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية فاخرة</figcaption>
             </figure>
             <!-- 103 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/QCr7CJK0/5447603825691791347-121.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/QCr7CJK0/5447603825691791347-121.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 104 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/j2rf24JT/5447603825691791348-121.jpg" alt="برجولة مع إضاءة ملونة">
+                <img src="https://i.postimg.cc/j2rf24JT/5447603825691791348-121.jpg" alt="برجولة مع إضاءة ملونة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ملونة</figcaption>
             </figure>
             <!-- 105 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NFwXFkrB/5447603825691791349-121.jpg" alt="برجولة مع جلسات مريحة">
+                <img src="https://i.postimg.cc/NFwXFkrB/5447603825691791349-121.jpg" alt="برجولة مع جلسات مريحة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات مريحة</figcaption>
             </figure>
             <!-- 106 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/7hyzhnTq/5447603825691791350-121.jpg" alt="برجولة مع مظلة جانبية">
+                <img src="https://i.postimg.cc/7hyzhnTq/5447603825691791350-121.jpg" alt="برجولة مع مظلة جانبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع مظلة جانبية</figcaption>
             </figure>
             <!-- 107 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/cCN3CBtT/5447603825691791351-121.jpg" alt="برجولة مع سقف قرميدي">
+                <img src="https://i.postimg.cc/cCN3CBtT/5447603825691791351-121.jpg" alt="برجولة مع سقف قرميدي" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف قرميدي</figcaption>
             </figure>
             <!-- 108 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/yxzRxy3f/5447603825691791352-121.jpg" alt="برجولة مع إضاءة مخفية">
+                <img src="https://i.postimg.cc/yxzRxy3f/5447603825691791352-121.jpg" alt="برجولة مع إضاءة مخفية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة مخفية</figcaption>
             </figure>
             <!-- 109 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/0jqSj0KV/5447603825691791353-121.jpg" alt="برجولة مع أعمدة مزخرفة">
+                <img src="https://i.postimg.cc/0jqSj0KV/5447603825691791353-121.jpg" alt="برجولة مع أعمدة مزخرفة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة مزخرفة</figcaption>
             </figure>
             <!-- 110 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/T1qDD5rn/b.jpg" alt="برجولة خشبية طبيعية">
+                <img src="https://i.postimg.cc/T1qDD5rn/b.jpg" alt="برجولة خشبية طبيعية" draggable="false">
                 <figcaption class="gallery-caption">برجولة خشبية طبيعية</figcaption>
             </figure>
             <!-- 111 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/NF7HH21H/b0.jpg" alt="برجولة مع إضاءة خارجية">
+                <img src="https://i.postimg.cc/NF7HH21H/b0.jpg" alt="برجولة مع إضاءة خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة خارجية</figcaption>
             </figure>
             <!-- 112 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/hvbddQ9T/b1.jpg" alt="برجولة مع جلسات خارجية">
+                <img src="https://i.postimg.cc/hvbddQ9T/b1.jpg" alt="برجولة مع جلسات خارجية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع جلسات خارجية</figcaption>
             </figure>
             <!-- 113 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/PJzwwvmZ/b3.jpg" alt="برجولة حديثة مع إضاءة">
+                <img src="https://i.postimg.cc/PJzwwvmZ/b3.jpg" alt="برجولة حديثة مع إضاءة" draggable="false">
                 <figcaption class="gallery-caption">برجولة حديثة مع إضاءة</figcaption>
             </figure>
             <!-- 114 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/0jdwwKpf/IMG-20260116-WA0000.jpg" alt="برجولة مع أعمدة خشبية">
+                <img src="https://i.postimg.cc/0jdwwKpf/IMG-20260116-WA0000.jpg" alt="برجولة مع أعمدة خشبية" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع أعمدة خشبية</figcaption>
             </figure>
             <!-- 115 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/yxXZZ3FT/IMG-20260116-WA0003.jpg" alt="برجولة مع سقف مائل">
+                <img src="https://i.postimg.cc/yxXZZ3FT/IMG-20260116-WA0003.jpg" alt="برجولة مع سقف مائل" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع سقف مائل</figcaption>
             </figure>
             <!-- 116 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/J0ckkHbc/IMG-20260116-WA0004.jpg" alt="برجولة كلاسيكية">
+                <img src="https://i.postimg.cc/J0ckkHbc/IMG-20260116-WA0004.jpg" alt="برجولة كلاسيكية" draggable="false">
                 <figcaption class="gallery-caption">برجولة كلاسيكية</figcaption>
             </figure>
             <!-- 117 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/qqX3368s/IMG-20260116-WA0007.jpg" alt="برجولة مع إضاءة ناعمة">
+                <img src="https://i.postimg.cc/qqX3368s/IMG-20260116-WA0007.jpg" alt="برجولة مع إضاءة ناعمة" draggable="false">
                 <figcaption class="gallery-caption">برجولة مع إضاءة ناعمة</figcaption>
             </figure>
             <!-- 118 -->
             <figure class="gallery-item">
-                <img src="https://i.postimg.cc/90Ctq34h/LORP4500-edit-384436840148504.jpg" alt="برجولة عصرية فاخرة">
+                <img src="https://i.postimg.cc/90Ctq34h/LORP4500-edit-384436840148504.jpg" alt="برجولة عصرية فاخرة" draggable="false">
                 <figcaption class="gallery-caption">برجولة عصرية فاخرة</figcaption>
             </figure>
         </div>
@@ -1059,7 +1087,7 @@
             </ul>
         </div>
 
-        <!-- قسم روابط جميع خدمات الموقع (تم إضافته حديثاً) -->
+        <!-- قسم روابط جميع خدمات الموقع -->
         <div class="services-links">
             <h2>خدماتنا الأخرى</h2>
             <div class="links-grid">
@@ -1075,7 +1103,7 @@
             </div>
         </div>
 
-        <!-- قسم المحتوى الثري (SEO) - تمت إضافته سابقاً -->
+        <!-- قسم المحتوى الثري (SEO) -->
         <div class="seo-content">
             <h2>أفضل برجولات خشبية في الأحساء</h2>
             <p>تعد <strong>البرجولات الخشبية</strong> من أهم عناصر الديكور الخارجي التي تضفي لمسة جمالية وفخامة على حدائق المنازل والفلل والقصور. في <strong>رواد المظلات</strong>، نوفر لكم تشكيلة واسعة من <strong>أجمل البرجولات الخشبية</strong> التي تجمع بين الأصالة والحداثة. سواء كنتم تبحثون عن <strong>برجولات خشبية عصرية</strong> للمسابح أو <strong>برجولات كلاسيكية فاخرة</strong> للجلسات الخارجية، فإن فريقنا من المصممين والمهندسين المتخصصين يضمن لكم تنفيذ أفخم التصاميم بدقة عالية.</p>
@@ -1099,14 +1127,32 @@
         </div>
     </footer>
 
-    <!-- كود JavaScript للتحكم في الترويسة -->
+    <!-- كود JavaScript للتحكم في الترويسة وحماية الصور -->
     <script>
+        // للتحكم في الترويسة عند التمرير
         window.addEventListener('scroll', function() {
             const header = document.getElementById('mainHeader');
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
+            }
+        });
+
+        // منع النقر بزر الماوس الأيمن على الصور فقط
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                return false;
+            });
+        });
+
+        // منع اختصارات لوحة المفاتيح لنسخ الصور (اختياري)
+        document.addEventListener('keydown', (e) => {
+            // منع Ctrl+C, Ctrl+V, Ctrl+S, Ctrl+P
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 's' || e.key === 'p')) {
+                e.preventDefault();
+                return false;
             }
         });
     </script>
