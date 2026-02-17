@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://almizalaat5-max.github.io/almi/index.html</loc>
-    <lastmod>2026-02-16</lastmod>
-  </url>
-  <url>
-    <loc>https://almizalaat5-max.github.io/almi/brjulat.html</loc>
-    <lastmod>2026-02-16</lastmod>
-  </url>
-  <url>
-    <loc>https://almizalaat5-max.github.io/almi/decorat.html</loc>
-    <lastmod>2026-02-16</lastmod>
-  </url>
-  <url>
-    <loc>https://almizalaat5-max.github.io/almi/hanajit.html</loc>
-    <lastmod>2026-02-16</lastmod>
+    <loc>https://almizalaat5-max.github.io/almi/</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://almizalaat5-max.github.io/almi/khayam.html</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://almizalaat5-max.github.io/almi/mazallat.html</loc>
-    <lastmod>2026-02-16</lastmod>
-  </url>
-  <url>
-    <loc>https://almizalaat5-max.github.io/almi/qarmid.html</loc>
-    <lastmod>2026-02-16</lastmod>
+    <loc>https://almizalaat5-max.github.io/almi/brjulat.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://almizalaat5-max.github.io/almi/sawatir.html</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://almizalaat5-max.github.io/almi/tansiq-hadayeq.html</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almizalaat5-max.github.io/almi/decorat.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almizalaat5-max.github.io/almi/mazallat.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almizalaat5-max.github.io/almi/qarmid.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almizalaat5-max.github.io/almi/hanajit.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
